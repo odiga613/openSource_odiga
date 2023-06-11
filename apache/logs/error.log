@@ -1,266 +1,77 @@
-[Tue May 02 16:53:54.079666 2023] [ssl:warn] [pid 29160:tid 428] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue May 02 16:53:54.124680 2023] [ssl:warn] [pid 29160:tid 428] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue May 02 16:53:54.150685 2023] [mpm_winnt:notice] [pid 29160:tid 428] AH00455: Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.33 configured -- resuming normal operations
-[Tue May 02 16:53:54.150685 2023] [mpm_winnt:notice] [pid 29160:tid 428] AH00456: Apache Lounge VC15 Server built: Jun 24 2022 10:13:23
-[Tue May 02 16:53:54.150685 2023] [core:notice] [pid 29160:tid 428] AH00094: Command line: 'C:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
-[Tue May 02 16:53:54.157388 2023] [mpm_winnt:notice] [pid 29160:tid 428] AH00418: Parent: Created child process 34868
-[Tue May 02 16:53:54.996576 2023] [ssl:warn] [pid 34868:tid 424] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue May 02 16:53:55.038586 2023] [ssl:warn] [pid 34868:tid 424] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue May 02 16:53:55.060591 2023] [mpm_winnt:notice] [pid 34868:tid 424] AH00354: Child: Starting 150 worker threads.
-[Tue May 02 16:54:18.511585 2023] [ssl:warn] [pid 35460:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue May 02 16:54:18.552594 2023] [ssl:warn] [pid 35460:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue May 02 16:54:18.572599 2023] [mpm_winnt:notice] [pid 35460:tid 404] AH00455: Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.33 configured -- resuming normal operations
-[Tue May 02 16:54:18.572599 2023] [mpm_winnt:notice] [pid 35460:tid 404] AH00456: Apache Lounge VC15 Server built: Jun 24 2022 10:13:23
-[Tue May 02 16:54:18.572599 2023] [core:notice] [pid 35460:tid 404] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
-[Tue May 02 16:54:18.576600 2023] [mpm_winnt:notice] [pid 35460:tid 404] AH00418: Parent: Created child process 30452
-[Tue May 02 16:54:19.335771 2023] [ssl:warn] [pid 30452:tid 408] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue May 02 16:54:19.374779 2023] [ssl:warn] [pid 30452:tid 408] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue May 02 16:54:19.395784 2023] [mpm_winnt:notice] [pid 30452:tid 408] AH00354: Child: Starting 150 worker threads.
-[Tue May 02 16:54:46.522808 2023] [php7:error] [pid 30452:tid 1856] [client ::1:7756] script 'C:/xampp/htdocs/main.php' not found or unable to stat
-[Tue May 02 16:54:47.723593 2023] [php7:error] [pid 30452:tid 1856] [client ::1:7756] script 'C:/xampp/htdocs/main.php' not found or unable to stat
-[Tue May 02 22:10:47.957524 2023] [ssl:warn] [pid 28176:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue May 02 22:10:48.004535 2023] [core:warn] [pid 28176:tid 404] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
-[Tue May 02 22:10:48.006535 2023] [ssl:warn] [pid 28176:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue May 02 22:10:48.246166 2023] [mpm_winnt:notice] [pid 28176:tid 404] AH00455: Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.33 configured -- resuming normal operations
-[Tue May 02 22:10:48.246166 2023] [mpm_winnt:notice] [pid 28176:tid 404] AH00456: Apache Lounge VC15 Server built: Jun 24 2022 10:13:23
-[Tue May 02 22:10:48.246166 2023] [core:notice] [pid 28176:tid 404] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
-[Tue May 02 22:10:48.251167 2023] [mpm_winnt:notice] [pid 28176:tid 404] AH00418: Parent: Created child process 15860
-[Tue May 02 22:10:49.036735 2023] [ssl:warn] [pid 15860:tid 408] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue May 02 22:10:49.079745 2023] [ssl:warn] [pid 15860:tid 408] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue May 02 22:10:49.102751 2023] [mpm_winnt:notice] [pid 15860:tid 408] AH00354: Child: Starting 150 worker threads.
-[Tue May 02 22:48:23.571394 2023] [php7:notice] [pid 15860:tid 1820] [client ::1:12282] PHP Notice:  Undefined index: pid in C:\\xampp\\htdocs\\index.php on line 7, referer: http://localhost/login.php
-[Tue May 02 22:48:36.430977 2023] [php7:notice] [pid 15860:tid 1848] [client ::1:12318] PHP Notice:  Undefined index: pid in C:\\xampp\\htdocs\\index.php on line 7, referer: http://localhost/login.php
-[Tue May 02 22:49:01.194542 2023] [php7:notice] [pid 15860:tid 1820] [client ::1:12419] PHP Notice:  Undefined variable: row in C:\\xampp\\htdocs\\saveToDatabase.php on line 33, referer: http://localhost/login.php
-[Tue May 02 22:49:01.194542 2023] [php7:notice] [pid 15860:tid 1820] [client ::1:12419] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 33, referer: http://localhost/login.php
-[Tue May 02 22:52:03.563362 2023] [php7:notice] [pid 15860:tid 1776] [client ::1:12780] PHP Notice:  Undefined variable: row in C:\\xampp\\htdocs\\saveToDatabase.php on line 33, referer: http://localhost/login.php
-[Tue May 02 22:52:03.563362 2023] [php7:notice] [pid 15860:tid 1776] [client ::1:12780] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 33, referer: http://localhost/login.php
-[Tue May 02 22:52:03.564362 2023] [php7:notice] [pid 15860:tid 1776] [client ::1:12780] PHP Notice:  Undefined variable: row in C:\\xampp\\htdocs\\saveToDatabase.php on line 44, referer: http://localhost/login.php
-[Tue May 02 22:52:03.564362 2023] [php7:notice] [pid 15860:tid 1776] [client ::1:12780] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 44, referer: http://localhost/login.php
-[Tue May 02 22:53:25.367757 2023] [php7:notice] [pid 15860:tid 1780] [client ::1:12935] PHP Notice:  Undefined variable: row in C:\\xampp\\htdocs\\saveToDatabase.php on line 33, referer: http://localhost/login.php
-[Tue May 02 22:53:25.368758 2023] [php7:notice] [pid 15860:tid 1780] [client ::1:12935] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 33, referer: http://localhost/login.php
-[Tue May 02 22:53:25.368758 2023] [php7:notice] [pid 15860:tid 1780] [client ::1:12935] PHP Notice:  Undefined variable: row in C:\\xampp\\htdocs\\saveToDatabase.php on line 43, referer: http://localhost/login.php
-[Tue May 02 22:53:25.368758 2023] [php7:notice] [pid 15860:tid 1780] [client ::1:12935] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 43, referer: http://localhost/login.php
-[Tue May 02 23:00:52.324452 2023] [php7:notice] [pid 15860:tid 1808] [client ::1:13403] PHP Notice:  Undefined index: user_pid in C:\\xampp\\htdocs\\save_coordinates.php on line 17
-[Tue May 02 23:00:52.324452 2023] [php7:notice] [pid 15860:tid 1808] [client ::1:13403] PHP Notice:  Undefined index: user_coordinate_x in C:\\xampp\\htdocs\\save_coordinates.php on line 18
-[Tue May 02 23:00:52.324452 2023] [php7:notice] [pid 15860:tid 1808] [client ::1:13403] PHP Notice:  Undefined index: user_coordinate_y in C:\\xampp\\htdocs\\save_coordinates.php on line 19
-[Tue May 02 23:20:17.041742 2023] [ssl:warn] [pid 44068:tid 412] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue May 02 23:20:17.082751 2023] [core:warn] [pid 44068:tid 412] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
-[Tue May 02 23:20:17.085752 2023] [ssl:warn] [pid 44068:tid 412] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue May 02 23:20:17.104756 2023] [mpm_winnt:notice] [pid 44068:tid 412] AH00455: Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.33 configured -- resuming normal operations
-[Tue May 02 23:20:17.104756 2023] [mpm_winnt:notice] [pid 44068:tid 412] AH00456: Apache Lounge VC15 Server built: Jun 24 2022 10:13:23
-[Tue May 02 23:20:17.104756 2023] [core:notice] [pid 44068:tid 412] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
-[Tue May 02 23:20:17.108758 2023] [mpm_winnt:notice] [pid 44068:tid 412] AH00418: Parent: Created child process 32540
-[Tue May 02 23:20:18.144038 2023] [ssl:warn] [pid 32540:tid 408] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue May 02 23:20:18.236059 2023] [ssl:warn] [pid 32540:tid 408] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Tue May 02 23:20:18.281069 2023] [mpm_winnt:notice] [pid 32540:tid 408] AH00354: Child: Starting 150 worker threads.
-[Tue May 02 23:58:40.151725 2023] [php7:notice] [pid 32540:tid 1852] [client ::1:13088] PHP Notice:  Undefined index: nickname in C:\\xampp\\htdocs\\index.php on line 89, referer: http://localhost/login.php
-[Tue May 02 23:58:51.695578 2023] [php7:notice] [pid 32540:tid 1816] [client ::1:13112] PHP Notice:  Undefined index: nickname in C:\\xampp\\htdocs\\index.php on line 89, referer: http://localhost/login.php
-[Tue May 02 23:58:56.616190 2023] [php7:notice] [pid 32540:tid 1852] [client ::1:13118] PHP Notice:  Undefined index: nickname in C:\\xampp\\htdocs\\index.php on line 89, referer: http://localhost/login.php
-[Tue May 02 23:59:04.312245 2023] [php7:notice] [pid 32540:tid 1840] [client ::1:13144] PHP Notice:  Undefined index: nickname in C:\\xampp\\htdocs\\index.php on line 89, referer: http://localhost/login.php
-[Tue May 02 23:59:59.199957 2023] [php7:notice] [pid 32540:tid 1816] [client ::1:13160] PHP Notice:  Undefined index: nickname in C:\\xampp\\htdocs\\index.php on line 89, referer: http://localhost/login.php
-[Wed May 03 00:00:06.362564 2023] [php7:notice] [pid 32540:tid 1852] [client ::1:13190] PHP Notice:  Undefined index: nickname in C:\\xampp\\htdocs\\index.php on line 89, referer: http://localhost/login.php
-[Wed May 03 00:00:14.592843 2023] [php7:notice] [pid 32540:tid 1832] [client ::1:13199] PHP Notice:  Undefined index: nickname in C:\\xampp\\htdocs\\index.php on line 89, referer: http://localhost/login.php
-[Wed May 03 00:59:19.094059 2023] [php7:warn] [pid 32540:tid 1852] [client ::1:10372] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8, referer: http://localhost/login.php
-[Wed May 03 00:59:20.699900 2023] [php7:warn] [pid 32540:tid 1832] [client ::1:10373] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8, referer: http://localhost/login.php
-[Wed May 03 00:59:23.829053 2023] [php7:warn] [pid 32540:tid 1804] [client ::1:10389] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8
-[Wed May 03 00:59:23.962081 2023] [php7:warn] [pid 32540:tid 1804] [client ::1:10389] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8, referer: http://localhost/index.php
-[Wed May 03 00:59:26.014520 2023] [php7:warn] [pid 32540:tid 1804] [client ::1:10389] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8
-[Wed May 03 00:59:37.606329 2023] [php7:warn] [pid 32540:tid 1832] [client ::1:10439] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8, referer: http://localhost/login.php
-[Wed May 03 00:59:40.832430 2023] [php7:warn] [pid 32540:tid 1808] [client ::1:10436] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8, referer: http://localhost/login.php
-[Wed May 03 00:59:47.671045 2023] [php7:warn] [pid 32540:tid 1852] [client ::1:10453] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8
-[Wed May 03 00:59:55.737155 2023] [php7:warn] [pid 32540:tid 1804] [client ::1:10492] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8
-[Wed May 03 01:00:01.044327 2023] [php7:warn] [pid 32540:tid 1804] [client ::1:10492] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8
-[Wed May 03 01:00:01.507066 2023] [php7:warn] [pid 32540:tid 1852] [client ::1:10499] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8
-[Wed May 03 01:00:57.982355 2023] [php7:warn] [pid 32540:tid 1820] [client ::1:10552] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8
-[Wed May 03 01:00:58.549008 2023] [php7:warn] [pid 32540:tid 1820] [client ::1:10552] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8, referer: http://localhost/
-[Wed May 03 01:01:00.340274 2023] [php7:warn] [pid 32540:tid 1820] [client ::1:10552] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8
-[Sun May 14 14:17:32.578574 2023] [ssl:warn] [pid 29052:tid 404] AH01882: Init: this version of mod_ssl was compiled against a newer library (OpenSSL 1.1.1p  21 Jun 2022, version currently loaded is OpenSSL 1.1.1n  15 Mar 2022) - may result in undefined or erroneous behavior
-[Sun May 14 14:17:32.584576 2023] [ssl:warn] [pid 29052:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sun May 14 14:17:32.626586 2023] [core:warn] [pid 29052:tid 404] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
-[Sun May 14 14:17:32.628585 2023] [ssl:warn] [pid 29052:tid 404] AH01882: Init: this version of mod_ssl was compiled against a newer library (OpenSSL 1.1.1p  21 Jun 2022, version currently loaded is OpenSSL 1.1.1n  15 Mar 2022) - may result in undefined or erroneous behavior
-[Sun May 14 14:17:32.628585 2023] [ssl:warn] [pid 29052:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sun May 14 14:17:32.903887 2023] [mpm_winnt:notice] [pid 29052:tid 404] AH00455: Apache/2.4.53 (Win64) OpenSSL/1.1.1n PHP/7.4.33 configured -- resuming normal operations
-[Sun May 14 14:17:32.903887 2023] [mpm_winnt:notice] [pid 29052:tid 404] AH00456: Apache Lounge VC15 Server built: Mar 16 2022 15:48:38
-[Sun May 14 14:17:32.903887 2023] [core:notice] [pid 29052:tid 404] AH00094: Command line: 'c:\\\xec\x96\xb8\xeb\xa6\xac\xec\x96\xbc \xea\xb0\x95\xec\x9d\x98\\apache\\bin\\httpd.exe -d C:/\xec\x96\xb8\xeb\xa6\xac\xec\x96\xbc \xea\xb0\x95\xec\x9d\x98/apache'
-[Sun May 14 14:17:32.909888 2023] [mpm_winnt:notice] [pid 29052:tid 404] AH00418: Parent: Created child process 42256
-[Sun May 14 14:17:33.827163 2023] [ssl:warn] [pid 42256:tid 412] AH01882: Init: this version of mod_ssl was compiled against a newer library (OpenSSL 1.1.1p  21 Jun 2022, version currently loaded is OpenSSL 1.1.1n  15 Mar 2022) - may result in undefined or erroneous behavior
-[Sun May 14 14:17:33.829165 2023] [ssl:warn] [pid 42256:tid 412] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sun May 14 14:17:33.874175 2023] [ssl:warn] [pid 42256:tid 412] AH01882: Init: this version of mod_ssl was compiled against a newer library (OpenSSL 1.1.1p  21 Jun 2022, version currently loaded is OpenSSL 1.1.1n  15 Mar 2022) - may result in undefined or erroneous behavior
-[Sun May 14 14:17:33.875175 2023] [ssl:warn] [pid 42256:tid 412] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sun May 14 14:17:33.906182 2023] [mpm_winnt:notice] [pid 42256:tid 412] AH00354: Child: Starting 150 worker threads.
-[Sun May 14 14:23:42.410552 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 8
-[Sun May 14 14:23:42.410552 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 9
-[Sun May 14 14:23:42.410552 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 9
-[Sun May 14 14:23:42.410552 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 10
-[Sun May 14 14:23:42.411552 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 10
-[Sun May 14 14:23:42.411552 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 11
-[Sun May 14 14:23:42.411552 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 11
-[Sun May 14 14:23:42.411552 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 12
-[Sun May 14 14:23:42.412552 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 12
-[Sun May 14 14:23:43.535184 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 8
-[Sun May 14 14:23:43.535184 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 9
-[Sun May 14 14:23:43.536184 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 9
-[Sun May 14 14:23:43.536184 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 10
-[Sun May 14 14:23:43.536184 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 10
-[Sun May 14 14:23:43.536184 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 11
-[Sun May 14 14:23:43.536184 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 11
-[Sun May 14 14:23:43.537184 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 12
-[Sun May 14 14:23:43.537184 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 12
-[Sun May 14 14:23:44.293170 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 8
-[Sun May 14 14:23:44.294170 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 9
-[Sun May 14 14:23:44.294170 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 9
-[Sun May 14 14:23:44.294170 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 10
-[Sun May 14 14:23:44.294170 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 10
-[Sun May 14 14:23:44.294170 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 11
-[Sun May 14 14:23:44.294170 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 11
-[Sun May 14 14:23:44.295171 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 12
-[Sun May 14 14:23:44.295171 2023] [php7:notice] [pid 42256:tid 1812] [client ::1:14249] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\saveToDatabase.php on line 12
-[Sun May 21 16:22:39.559680 2023] [ssl:warn] [pid 28860:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sun May 21 16:22:39.613692 2023] [core:warn] [pid 28860:tid 400] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
-[Sun May 21 16:22:39.616694 2023] [ssl:warn] [pid 28860:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sun May 21 16:22:39.911614 2023] [mpm_winnt:notice] [pid 28860:tid 400] AH00455: Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.33 configured -- resuming normal operations
-[Sun May 21 16:22:39.911614 2023] [mpm_winnt:notice] [pid 28860:tid 400] AH00456: Apache Lounge VC15 Server built: Jun 24 2022 10:13:23
-[Sun May 21 16:22:39.911614 2023] [core:notice] [pid 28860:tid 400] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
-[Sun May 21 16:22:39.918615 2023] [mpm_winnt:notice] [pid 28860:tid 400] AH00418: Parent: Created child process 37020
-[Sun May 21 16:22:40.758806 2023] [ssl:warn] [pid 37020:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sun May 21 16:22:40.814818 2023] [ssl:warn] [pid 37020:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sun May 21 16:22:40.842823 2023] [mpm_winnt:notice] [pid 37020:tid 400] AH00354: Child: Starting 150 worker threads.
-[Sun May 21 17:15:08.323741 2023] [ssl:warn] [pid 42280:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sun May 21 17:15:08.364736 2023] [core:warn] [pid 42280:tid 400] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
-[Sun May 21 17:15:08.367737 2023] [ssl:warn] [pid 42280:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sun May 21 17:15:08.387061 2023] [mpm_winnt:notice] [pid 42280:tid 400] AH00455: Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.33 configured -- resuming normal operations
-[Sun May 21 17:15:08.387061 2023] [mpm_winnt:notice] [pid 42280:tid 400] AH00456: Apache Lounge VC15 Server built: Jun 24 2022 10:13:23
-[Sun May 21 17:15:08.387061 2023] [core:notice] [pid 42280:tid 400] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
-[Sun May 21 17:15:08.391897 2023] [mpm_winnt:notice] [pid 42280:tid 400] AH00418: Parent: Created child process 36588
-[Sun May 21 17:15:09.186012 2023] [ssl:warn] [pid 36588:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sun May 21 17:15:09.228162 2023] [ssl:warn] [pid 36588:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sun May 21 17:15:09.249971 2023] [mpm_winnt:notice] [pid 36588:tid 404] AH00354: Child: Starting 150 worker threads.
-[Sun May 21 17:18:05.765221 2023] [php7:error] [pid 36588:tid 1828] [client ::1:5933] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\\xampp\\htdocs\\login\\saveToDatabase.php:17\nStack trace:\n#0 {main}\n  thrown in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 17, referer: http://localhost/login/login.php
-[Sun May 21 17:18:57.051870 2023] [php7:error] [pid 36588:tid 1836] [client ::1:6042] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\\xampp\\htdocs\\login\\saveToDatabase.php:17\nStack trace:\n#0 {main}\n  thrown in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 17, referer: http://localhost/login/login.php
-[Sun May 21 17:20:14.430517 2023] [php7:error] [pid 36588:tid 1836] [client ::1:6113] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\\xampp\\htdocs\\login\\saveToDatabase.php:17\nStack trace:\n#0 {main}\n  thrown in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 17, referer: http://localhost/login/login.php
-[Sun May 21 17:21:12.414277 2023] [php7:error] [pid 36588:tid 1844] [client ::1:6166] PHP Fatal error:  Uncaught Error: Cannot pass parameter 5 by reference in C:\\xampp\\htdocs\\login\\saveToDatabase.php:29\nStack trace:\n#0 {main}\n  thrown in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 29, referer: http://localhost/login/login.php
-[Sun May 21 17:22:22.922541 2023] [php7:error] [pid 36588:tid 1828] [client ::1:6206] PHP Fatal error:  Uncaught Error: Cannot pass parameter 5 by reference in C:\\xampp\\htdocs\\login\\saveToDatabase.php:29\nStack trace:\n#0 {main}\n  thrown in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 29, referer: http://localhost/login/login.php
-[Sun May 21 17:22:42.176773 2023] [php7:warn] [pid 36588:tid 1812] [client ::1:6255] PHP Warning:  include(./lib/mysql.php): failed to open stream: No such file or directory in C:\\xampp\\htdocs\\login\\login.php on line 7
-[Sun May 21 17:22:42.176773 2023] [php7:warn] [pid 36588:tid 1812] [client ::1:6255] PHP Warning:  include(): Failed opening './lib/mysql.php' for inclusion (include_path='C:\\xampp\\php\\PEAR') in C:\\xampp\\htdocs\\login\\login.php on line 7
-[Sun May 21 17:23:21.628811 2023] [php7:error] [pid 36588:tid 1812] [client ::1:6265] PHP Fatal error:  Uncaught Error: Cannot pass parameter 5 by reference in C:\\xampp\\htdocs\\login\\saveToDatabase.php:29\nStack trace:\n#0 {main}\n  thrown in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 29, referer: http://localhost/login/login.php
-[Sun May 21 17:26:27.583908 2023] [php7:notice] [pid 36588:tid 1828] [client ::1:6386] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 8
-[Sun May 21 17:26:27.583908 2023] [php7:notice] [pid 36588:tid 1828] [client ::1:6386] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 9
-[Sun May 21 17:26:27.583908 2023] [php7:notice] [pid 36588:tid 1828] [client ::1:6386] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 9
-[Sun May 21 17:26:27.584908 2023] [php7:notice] [pid 36588:tid 1828] [client ::1:6386] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 10
-[Sun May 21 17:26:27.584908 2023] [php7:notice] [pid 36588:tid 1828] [client ::1:6386] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 10
-[Sun May 21 17:26:27.584908 2023] [php7:notice] [pid 36588:tid 1828] [client ::1:6386] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 11
-[Sun May 21 17:26:27.584908 2023] [php7:notice] [pid 36588:tid 1828] [client ::1:6386] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 11
-[Sun May 21 17:26:27.584908 2023] [php7:notice] [pid 36588:tid 1828] [client ::1:6386] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 12
-[Sun May 21 17:26:27.584908 2023] [php7:notice] [pid 36588:tid 1828] [client ::1:6386] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 12
-[Sun May 21 17:26:27.585916 2023] [php7:error] [pid 36588:tid 1828] [client ::1:6386] PHP Fatal error:  Uncaught Error: Cannot pass parameter 5 by reference in C:\\xampp\\htdocs\\login\\saveToDatabase.php:29\nStack trace:\n#0 {main}\n  thrown in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 29
-[Sun May 21 17:26:55.849159 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6392] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 8
-[Sun May 21 17:26:55.849159 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6392] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 9
-[Sun May 21 17:26:55.849159 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6392] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 9
-[Sun May 21 17:26:55.849159 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6392] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 10
-[Sun May 21 17:26:55.850159 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6392] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 10
-[Sun May 21 17:26:55.850159 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6392] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 11
-[Sun May 21 17:26:55.850159 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6392] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 11
-[Sun May 21 17:26:55.850159 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6392] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 12
-[Sun May 21 17:26:55.850159 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6392] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 12
-[Sun May 21 17:32:03.164251 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6757] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 8
-[Sun May 21 17:32:03.164251 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6757] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 8
-[Sun May 21 17:32:03.164251 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6757] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 9
-[Sun May 21 17:32:03.165251 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6757] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 9
-[Sun May 21 17:32:03.165251 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6757] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 10
-[Sun May 21 17:32:03.165251 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6757] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 10
-[Sun May 21 17:32:51.514386 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6758] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 8
-[Sun May 21 17:32:51.514386 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6758] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 8
-[Sun May 21 17:32:51.514386 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6758] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 9
-[Sun May 21 17:32:51.514386 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6758] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 9
-[Sun May 21 17:32:51.515386 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6758] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 10
-[Sun May 21 17:32:51.515386 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6758] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 10
-[Sun May 21 17:32:52.319048 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6758] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 8
-[Sun May 21 17:32:52.319048 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6758] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 8
-[Sun May 21 17:32:52.319048 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6758] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 9
-[Sun May 21 17:32:52.319048 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6758] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 9
-[Sun May 21 17:32:52.320048 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6758] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 10
-[Sun May 21 17:32:52.320048 2023] [php7:notice] [pid 36588:tid 1812] [client ::1:6758] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 10
-[Sun May 21 17:33:14.255015 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 8
-[Sun May 21 17:33:14.256013 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 8
-[Sun May 21 17:33:14.256013 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 9
-[Sun May 21 17:33:14.256013 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 9
-[Sun May 21 17:33:14.256013 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 10
-[Sun May 21 17:33:14.257010 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 10
-[Sun May 21 17:33:14.864002 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 8
-[Sun May 21 17:33:14.864002 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 8
-[Sun May 21 17:33:14.864002 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 9
-[Sun May 21 17:33:14.865002 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 9
-[Sun May 21 17:33:14.865002 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 10
-[Sun May 21 17:33:14.865002 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 10
-[Sun May 21 17:33:15.156725 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 8
-[Sun May 21 17:33:15.157726 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 8
-[Sun May 21 17:33:15.157726 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 9
-[Sun May 21 17:33:15.157726 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 9
-[Sun May 21 17:33:15.157726 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 10
-[Sun May 21 17:33:15.158726 2023] [php7:notice] [pid 36588:tid 1836] [client ::1:6791] PHP Notice:  Trying to access array offset on value of type null in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 10
-[Sun May 21 17:41:14.627899 2023] [php7:notice] [pid 36588:tid 1796] [client ::1:7579] PHP Notice:  Undefined index: pid in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 22, referer: http://localhost/login/login.php
-[Sun May 21 17:41:29.450944 2023] [php7:notice] [pid 36588:tid 1816] [client ::1:7682] PHP Notice:  Undefined index: pid in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 22, referer: http://localhost/login/login.php
-[Sun May 21 19:47:54.338325 2023] [php7:error] [pid 36588:tid 1808] [client ::1:12182] script 'C:/xampp/htdocs/login_process.php' not found or unable to stat, referer: http://localhost/
-[Sun May 21 19:48:10.203212 2023] [php7:error] [pid 36588:tid 1796] [client ::1:12234] script 'C:/xampp/htdocs/saveToDatabase.php' not found or unable to stat, referer: http://localhost/
-[Sun May 21 19:51:40.164752 2023] [php7:error] [pid 36588:tid 1772] [client ::1:12314] PHP Parse error:  syntax error, unexpected '}' in C:\\xampp\\htdocs\\login\\login_process.php on line 12, referer: http://localhost/login/login.php
-[Sun May 21 19:51:48.297315 2023] [php7:error] [pid 36588:tid 1764] [client ::1:12322] script 'C:/xampp/htdocs/index.php' not found or unable to stat, referer: http://localhost/login/login.php
-[Sun May 21 19:53:57.565355 2023] [php7:notice] [pid 36588:tid 1772] [client ::1:12382] PHP Notice:  Undefined index: pid in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 22, referer: http://localhost/login/login.php
-[Sun May 21 19:54:20.051035 2023] [php7:notice] [pid 36588:tid 1772] [client ::1:12429] PHP Notice:  Undefined index: pid in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 22, referer: http://localhost/login/login.php
-[Sun May 21 19:54:20.059036 2023] [php7:notice] [pid 36588:tid 1764] [client ::1:12430] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 13, referer: http://localhost/login/login.php
-[Sun May 21 19:54:20.061037 2023] [php7:notice] [pid 36588:tid 1764] [client ::1:12430] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 13, referer: http://localhost/login/login.php
-[Sun May 21 19:54:46.924083 2023] [php7:notice] [pid 36588:tid 1764] [client ::1:12451] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 13, referer: http://localhost/login/login.php
-[Sun May 21 19:54:49.303414 2023] [php7:notice] [pid 36588:tid 1764] [client ::1:12451] PHP Notice:  Undefined index: pid in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 22, referer: http://localhost/login/login.php
-[Sun May 21 19:54:49.311417 2023] [php7:error] [pid 36588:tid 1772] [client ::1:12452] script 'C:/xampp/htdocs/login/index.php' not found or unable to stat, referer: http://localhost/login/login.php
-[Sun May 21 19:54:49.313417 2023] [php7:notice] [pid 36588:tid 1764] [client ::1:12451] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 13, referer: http://localhost/login/login.php
-[Sun May 21 19:54:55.325228 2023] [php7:notice] [pid 36588:tid 1764] [client ::1:12451] PHP Notice:  Undefined index: pid in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 22, referer: http://localhost/login/login.php
-[Sun May 21 19:54:55.333273 2023] [php7:notice] [pid 36588:tid 1764] [client ::1:12451] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 13, referer: http://localhost/login/login.php
-[Sun May 21 19:54:55.336132 2023] [php7:notice] [pid 36588:tid 1764] [client ::1:12451] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 13, referer: http://localhost/login/login.php
-[Sun May 21 19:55:19.254895 2023] [php7:notice] [pid 36588:tid 1772] [client ::1:12468] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 13, referer: http://localhost/login/login.php
-[Sun May 21 19:55:21.041214 2023] [php7:notice] [pid 36588:tid 1772] [client ::1:12468] PHP Notice:  Undefined index: pid in C:\\xampp\\htdocs\\login\\saveToDatabase.php on line 20, referer: http://localhost/login/login.php
-[Sun May 21 19:55:21.055208 2023] [php7:notice] [pid 36588:tid 1764] [client ::1:12482] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 13, referer: http://localhost/login/login.php
-[Sun May 21 19:55:21.057207 2023] [php7:notice] [pid 36588:tid 1764] [client ::1:12482] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 13, referer: http://localhost/login/login.php
-[Sun May 21 19:55:34.346758 2023] [php7:notice] [pid 36588:tid 1764] [client ::1:12492] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 13, referer: http://localhost/login/login.php
-[Sun May 21 19:55:49.576815 2023] [php7:notice] [pid 36588:tid 1808] [client ::1:12511] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 13
-[Sun May 21 19:55:57.468760 2023] [php7:notice] [pid 36588:tid 1808] [client ::1:12522] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\login.php on line 13
-[Sun May 21 19:56:03.723407 2023] [php7:notice] [pid 36588:tid 1808] [client ::1:12525] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\login.php on line 13
-[Sun May 21 19:59:18.479518 2023] [php7:notice] [pid 36588:tid 1808] [client 192.168.201.107:54728] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 13
-[Sun May 21 20:01:56.268359 2023] [php7:notice] [pid 36588:tid 1808] [client 192.168.201.109:45504] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 21
-[Sun May 21 20:02:04.917189 2023] [php7:notice] [pid 36588:tid 1764] [client 192.168.201.109:45508] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 21
-[Sat May 27 13:08:13.195123 2023] [ssl:warn] [pid 26644:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sat May 27 13:08:13.234870 2023] [core:warn] [pid 26644:tid 400] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
-[Sat May 27 13:08:13.236870 2023] [ssl:warn] [pid 26644:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sat May 27 13:08:13.436620 2023] [mpm_winnt:notice] [pid 26644:tid 400] AH00455: Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.33 configured -- resuming normal operations
-[Sat May 27 13:08:13.436620 2023] [mpm_winnt:notice] [pid 26644:tid 400] AH00456: Apache Lounge VC15 Server built: Jun 24 2022 10:13:23
-[Sat May 27 13:08:13.436620 2023] [core:notice] [pid 26644:tid 400] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
-[Sat May 27 13:08:13.442621 2023] [mpm_winnt:notice] [pid 26644:tid 400] AH00418: Parent: Created child process 10776
-[Sat May 27 13:08:14.207580 2023] [ssl:warn] [pid 10776:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sat May 27 13:08:14.246588 2023] [ssl:warn] [pid 10776:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sat May 27 13:08:14.267584 2023] [mpm_winnt:notice] [pid 10776:tid 404] AH00354: Child: Starting 150 worker threads.
-[Sat May 27 13:08:32.384992 2023] [php7:notice] [pid 10776:tid 1832] [client ::1:7809] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 21
-[Sat May 27 13:11:14.992943 2023] [ssl:warn] [pid 1848:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sat May 27 13:11:15.034148 2023] [core:warn] [pid 1848:tid 400] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
-[Sat May 27 13:11:15.036149 2023] [ssl:warn] [pid 1848:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sat May 27 13:11:15.092316 2023] [mpm_winnt:notice] [pid 1848:tid 400] AH00455: Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.33 configured -- resuming normal operations
-[Sat May 27 13:11:15.092316 2023] [mpm_winnt:notice] [pid 1848:tid 400] AH00456: Apache Lounge VC15 Server built: Jun 24 2022 10:13:23
-[Sat May 27 13:11:15.092316 2023] [core:notice] [pid 1848:tid 400] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
-[Sat May 27 13:11:15.098317 2023] [mpm_winnt:notice] [pid 1848:tid 400] AH00418: Parent: Created child process 2580
-[Sat May 27 13:11:15.879492 2023] [ssl:warn] [pid 2580:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sat May 27 13:11:15.919431 2023] [ssl:warn] [pid 2580:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Sat May 27 13:11:15.940436 2023] [mpm_winnt:notice] [pid 2580:tid 404] AH00354: Child: Starting 150 worker threads.
-[Sat May 27 13:11:17.400863 2023] [php7:notice] [pid 2580:tid 1848] [client ::1:8044] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 21
-[Sat May 27 13:18:30.721103 2023] [php7:notice] [pid 2580:tid 1808] [client 127.0.0.1:8726] PHP Notice:  Undefined index: user_id in C:\\xampp\\htdocs\\index.php on line 21
-[Sat May 27 13:25:40.883974 2023] [php7:warn] [pid 2580:tid 1820] [client ::1:8943] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8, referer: http://localhost/login.php
-[Sat May 27 13:25:44.498786 2023] [php7:warn] [pid 2580:tid 1832] [client ::1:8944] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8, referer: http://localhost/login.php
-[Sat May 27 13:25:45.765495 2023] [php7:warn] [pid 2580:tid 1820] [client ::1:8943] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8, referer: http://localhost/login.php
-[Sat May 27 13:26:08.668454 2023] [php7:warn] [pid 2580:tid 1832] [client ::1:8950] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8, referer: http://localhost/login.php
-[Sat May 27 13:26:09.253823 2023] [php7:warn] [pid 2580:tid 1820] [client ::1:8953] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u282012041_janghyeonseo'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\lib\\mysql.php on line 8, referer: http://localhost/login.php
-[Fri Jun 02 18:15:35.041702 2023] [ssl:warn] [pid 3008:tid 340] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Fri Jun 02 18:15:35.066826 2023] [core:warn] [pid 3008:tid 340] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
-[Fri Jun 02 18:15:35.068070 2023] [ssl:warn] [pid 3008:tid 340] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Fri Jun 02 18:15:35.268651 2023] [mpm_winnt:notice] [pid 3008:tid 340] AH00455: Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.33 configured -- resuming normal operations
-[Fri Jun 02 18:15:35.268651 2023] [mpm_winnt:notice] [pid 3008:tid 340] AH00456: Apache Lounge VC15 Server built: Jun 24 2022 10:13:23
-[Fri Jun 02 18:15:35.268651 2023] [core:notice] [pid 3008:tid 340] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
-[Fri Jun 02 18:15:35.274454 2023] [mpm_winnt:notice] [pid 3008:tid 340] AH00418: Parent: Created child process 14784
-[Fri Jun 02 18:15:35.444378 2023] [ssl:warn] [pid 14784:tid 348] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Fri Jun 02 18:15:35.468488 2023] [ssl:warn] [pid 14784:tid 348] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
-[Fri Jun 02 18:15:35.483402 2023] [mpm_winnt:notice] [pid 14784:tid 348] AH00354: Child: Starting 150 worker threads.
+[Thu Jun 08 18:24:49.022514 2023] [ssl:warn] [pid 4352:tid 364] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 18:24:49.061508 2023] [ssl:warn] [pid 4352:tid 364] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 18:24:49.309651 2023] [mpm_winnt:notice] [pid 4352:tid 364] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Thu Jun 08 18:24:49.309651 2023] [mpm_winnt:notice] [pid 4352:tid 364] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Thu Jun 08 18:24:49.309651 2023] [core:notice] [pid 4352:tid 364] AH00094: Command line: 'C:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Thu Jun 08 18:24:49.318615 2023] [mpm_winnt:notice] [pid 4352:tid 364] AH00418: Parent: Created child process 3552
+[Thu Jun 08 18:24:49.713855 2023] [ssl:warn] [pid 3552:tid 384] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 18:24:49.757758 2023] [ssl:warn] [pid 3552:tid 384] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 18:24:49.796933 2023] [mpm_winnt:notice] [pid 3552:tid 384] AH00354: Child: Starting 150 worker threads.
+[Thu Jun 08 18:31:39.458703 2023] [ssl:warn] [pid 16308:tid 168] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 18:31:39.499432 2023] [ssl:warn] [pid 16308:tid 168] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 18:31:39.758758 2023] [mpm_winnt:notice] [pid 16308:tid 168] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Thu Jun 08 18:31:39.758758 2023] [mpm_winnt:notice] [pid 16308:tid 168] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Thu Jun 08 18:31:39.758758 2023] [core:notice] [pid 16308:tid 168] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Thu Jun 08 18:31:39.762741 2023] [mpm_winnt:notice] [pid 16308:tid 168] AH00418: Parent: Created child process 10932
+[Thu Jun 08 18:31:40.085816 2023] [ssl:warn] [pid 10932:tid 364] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 18:31:40.121132 2023] [ssl:warn] [pid 10932:tid 364] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 18:31:40.155957 2023] [mpm_winnt:notice] [pid 10932:tid 364] AH00354: Child: Starting 150 worker threads.
+[Thu Jun 08 18:34:15.016061 2023] [mpm_winnt:crit] [pid 10932:tid 364] AH02538: Child: Parent process exited abruptly. Child process is ending
+[Thu Jun 08 18:53:24.813767 2023] [ssl:warn] [pid 11672:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 18:53:24.856776 2023] [core:warn] [pid 11672:tid 400] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Jun 08 18:53:24.858776 2023] [ssl:warn] [pid 11672:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 18:53:24.972402 2023] [mpm_winnt:notice] [pid 11672:tid 400] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Thu Jun 08 18:53:24.972402 2023] [mpm_winnt:notice] [pid 11672:tid 400] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Thu Jun 08 18:53:24.972402 2023] [core:notice] [pid 11672:tid 400] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Thu Jun 08 18:53:24.977404 2023] [mpm_winnt:notice] [pid 11672:tid 400] AH00418: Parent: Created child process 4628
+[Thu Jun 08 18:53:25.756578 2023] [ssl:warn] [pid 4628:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 18:53:25.798587 2023] [ssl:warn] [pid 4628:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 18:53:25.860601 2023] [mpm_winnt:notice] [pid 4628:tid 404] AH00354: Child: Starting 150 worker threads.
+[Thu Jun 08 20:29:37.642184 2023] [php:warn] [pid 4628:tid 1848] [client ::1:11279] PHP Warning:  include(../lib/mysql.php): Failed to open stream: No such file or directory in C:\\xampp\\htdocs\\saveToDatabase.php on line 3, referer: http://localhost/kakao.php
+[Thu Jun 08 20:29:37.642184 2023] [php:warn] [pid 4628:tid 1848] [client ::1:11279] PHP Warning:  include(): Failed opening '../lib/mysql.php' for inclusion (include_path='C:\\xampp\\php\\PEAR') in C:\\xampp\\htdocs\\saveToDatabase.php on line 3, referer: http://localhost/kakao.php
+[Thu Jun 08 20:29:37.642184 2023] [php:warn] [pid 4628:tid 1848] [client ::1:11279] PHP Warning:  Undefined variable $conn in C:\\xampp\\htdocs\\saveToDatabase.php on line 12, referer: http://localhost/kakao.php
+[Thu Jun 08 20:29:37.642184 2023] [php:error] [pid 4628:tid 1848] [client ::1:11279] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\\xampp\\htdocs\\saveToDatabase.php:12\nStack trace:\n#0 {main}\n  thrown in C:\\xampp\\htdocs\\saveToDatabase.php on line 12, referer: http://localhost/kakao.php
+[Thu Jun 08 20:29:52.011588 2023] [php:warn] [pid 4628:tid 1768] [client ::1:11298] PHP Warning:  include(../lib/mysql.php): Failed to open stream: No such file or directory in C:\\xampp\\htdocs\\saveToDatabase.php on line 3, referer: http://localhost/kakao.php
+[Thu Jun 08 20:29:52.012589 2023] [php:warn] [pid 4628:tid 1768] [client ::1:11298] PHP Warning:  include(): Failed opening '../lib/mysql.php' for inclusion (include_path='C:\\xampp\\php\\PEAR') in C:\\xampp\\htdocs\\saveToDatabase.php on line 3, referer: http://localhost/kakao.php
+[Thu Jun 08 20:29:52.012589 2023] [php:warn] [pid 4628:tid 1768] [client ::1:11298] PHP Warning:  Undefined variable $conn in C:\\xampp\\htdocs\\saveToDatabase.php on line 12, referer: http://localhost/kakao.php
+[Thu Jun 08 20:29:52.012589 2023] [php:error] [pid 4628:tid 1768] [client ::1:11298] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\\xampp\\htdocs\\saveToDatabase.php:12\nStack trace:\n#0 {main}\n  thrown in C:\\xampp\\htdocs\\saveToDatabase.php on line 12, referer: http://localhost/kakao.php
+[Thu Jun 08 20:53:35.192699 2023] [ssl:warn] [pid 14472:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 20:53:35.233709 2023] [core:warn] [pid 14472:tid 400] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Jun 08 20:53:35.235709 2023] [ssl:warn] [pid 14472:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 20:53:35.293722 2023] [mpm_winnt:notice] [pid 14472:tid 400] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Thu Jun 08 20:53:35.293722 2023] [mpm_winnt:notice] [pid 14472:tid 400] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Thu Jun 08 20:53:35.293722 2023] [core:notice] [pid 14472:tid 400] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Thu Jun 08 20:53:35.298723 2023] [mpm_winnt:notice] [pid 14472:tid 400] AH00418: Parent: Created child process 28696
+[Thu Jun 08 20:53:36.057895 2023] [ssl:warn] [pid 28696:tid 412] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 20:53:36.098903 2023] [ssl:warn] [pid 28696:tid 412] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 20:53:36.160917 2023] [mpm_winnt:notice] [pid 28696:tid 412] AH00354: Child: Starting 150 worker threads.
+[Thu Jun 08 22:09:16.152926 2023] [ssl:warn] [pid 21924:tid 356] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 22:09:16.190400 2023] [core:warn] [pid 21924:tid 356] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Jun 08 22:09:16.192400 2023] [ssl:warn] [pid 21924:tid 356] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 22:09:16.237677 2023] [mpm_winnt:notice] [pid 21924:tid 356] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Thu Jun 08 22:09:16.237677 2023] [mpm_winnt:notice] [pid 21924:tid 356] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Thu Jun 08 22:09:16.237677 2023] [core:notice] [pid 21924:tid 356] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Thu Jun 08 22:09:16.245367 2023] [mpm_winnt:notice] [pid 21924:tid 356] AH00418: Parent: Created child process 2176
+[Thu Jun 08 22:09:16.578316 2023] [ssl:warn] [pid 2176:tid 192] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 22:09:16.615564 2023] [ssl:warn] [pid 2176:tid 192] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Jun 08 22:09:16.657328 2023] [mpm_winnt:notice] [pid 2176:tid 192] AH00354: Child: Starting 150 worker threads.
+[Thu Jun 08 22:11:32.640570 2023] [php:error] [pid 2176:tid 1868] [client ::1:50006] script 'C:/xampp/htdocs/login.php' not found or unable to stat
+[Thu Jun 08 22:42:13.421758 2023] [php:error] [pid 2176:tid 1852] [client ::1:50439] script 'C:/xampp/htdocs/login/join_process.php' not found or unable to stat, referer: http://localhost/login/join.php
+[Thu Jun 08 22:43:38.605073 2023] [php:warn] [pid 2176:tid 1852] [client ::1:50448] PHP Warning:  Undefined array key "pass" in C:\\xampp\\htdocs\\login\\join_process.php on line 6, referer: http://localhost/login/join.php
+[Thu Jun 08 22:43:38.607045 2023] [php:error] [pid 2176:tid 1852] [client ::1:50448] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'user_password' in 'field list' in C:\\xampp\\htdocs\\login\\join_process.php:9\nStack trace:\n#0 C:\\xampp\\htdocs\\login\\join_process.php(9): mysqli_query(Object(mysqli), 'INSERT INTO use...')\n#1 {main}\n  thrown in C:\\xampp\\htdocs\\login\\join_process.php on line 9, referer: http://localhost/login/join.php
+[Thu Jun 08 22:44:04.515615 2023] [php:error] [pid 2176:tid 1852] [client ::1:50450] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'user_password' in 'field list' in C:\\xampp\\htdocs\\login\\join_process.php:9\nStack trace:\n#0 C:\\xampp\\htdocs\\login\\join_process.php(9): mysqli_query(Object(mysqli), 'INSERT INTO use...')\n#1 {main}\n  thrown in C:\\xampp\\htdocs\\login\\join_process.php on line 9, referer: http://localhost/login/join.php
+[Thu Jun 08 22:44:07.904358 2023] [php:error] [pid 2176:tid 1836] [client ::1:50451] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'user_password' in 'field list' in C:\\xampp\\htdocs\\login\\join_process.php:9\nStack trace:\n#0 C:\\xampp\\htdocs\\login\\join_process.php(9): mysqli_query(Object(mysqli), 'INSERT INTO use...')\n#1 {main}\n  thrown in C:\\xampp\\htdocs\\login\\join_process.php on line 9, referer: http://localhost/login/join.php
+[Thu Jun 08 22:46:57.735070 2023] [php:error] [pid 2176:tid 1876] [client ::1:50487] PHP Parse error:  syntax error, unexpected token "<" in C:\\xampp\\htdocs\\login\\join_process.php on line 9, referer: http://localhost/login/join.php
+[Thu Jun 08 22:47:59.459016 2023] [php:error] [pid 2176:tid 1876] [client ::1:50493] PHP Fatal error:  Uncaught Error: Undefined constant "NUlll" in C:\\xampp\\htdocs\\login\\join_process.php:8\nStack trace:\n#0 {main}\n  thrown in C:\\xampp\\htdocs\\login\\join_process.php on line 8, referer: http://localhost/login/join.php
+[Thu Jun 08 22:50:00.515895 2023] [php:error] [pid 2176:tid 1868] [client ::1:50559] PHP Parse error:  syntax error, unexpected token "{" in C:\\xampp\\htdocs\\login\\join_process.php on line 8, referer: http://localhost/login/join.php
+[Thu Jun 08 22:53:47.082379 2023] [php:error] [pid 2176:tid 1876] [client ::1:50634] PHP Parse error:  Unmatched '}' in C:\\xampp\\htdocs\\login\\join_process.php on line 8, referer: http://localhost/login/join.php
+[Fri Jun 09 17:02:10.000614 2023] [ssl:warn] [pid 24744:tid 352] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 09 17:02:10.037139 2023] [core:warn] [pid 24744:tid 352] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Jun 09 17:02:10.039525 2023] [ssl:warn] [pid 24744:tid 352] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 09 17:02:10.331891 2023] [mpm_winnt:notice] [pid 24744:tid 352] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Fri Jun 09 17:02:10.331891 2023] [mpm_winnt:notice] [pid 24744:tid 352] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Fri Jun 09 17:02:10.331891 2023] [core:notice] [pid 24744:tid 352] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Fri Jun 09 17:02:10.338296 2023] [mpm_winnt:notice] [pid 24744:tid 352] AH00418: Parent: Created child process 18400
+[Fri Jun 09 17:02:10.669334 2023] [ssl:warn] [pid 18400:tid 360] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 09 17:02:10.704304 2023] [ssl:warn] [pid 18400:tid 360] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 09 17:02:10.740081 2023] [mpm_winnt:notice] [pid 18400:tid 360] AH00354: Child: Starting 150 worker threads.

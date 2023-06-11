@@ -1,21 +1,21 @@
-###### ApacheFriends XAMPP Version 7.4.33 ######
+###### ApacheFriends XAMPP Version 8.2.4 ######
 
-Wichtig! PHP in diesem Paket benötigt die Microsoft Visual C++ @@BITROCK_VCREDIST_VERSION@@ Redistributable Erweiterung von
-http://www.microsoft.com/en-us/download/. Bitte stellen Sie sicher das die VC++ @@BITROCK_VCREDIST_VERSION@@
+Wichtig! PHP in diesem Paket benötigt die Microsoft Visual C++ 2019 Redistributable Erweiterung von
+http://www.microsoft.com/en-us/download/. Bitte stellen Sie sicher das die VC++ 2019
 Runtime Bibliothek auf Ihrem System installiert ist.
 
-  + Apache @@BITROCK_APACHE_VERSION@@
-  + MariaDB @@BITROCK_MARIADB_VERSION@@
-  + PHP @@BITROCK_PHP_VERSION@@ + PEAR
-  + phpMyAdmin @@BITROCK_PHPMYADMIN_VERSION@@
-  + OpenSSL @@BITROCK_OPENSSL_VERSION@@
-  + ADOdb @@BITROCK_ADODB_VERSION@@
+  + Apache 2.4.56
+  + MariaDB 10.4.28
+  + PHP 8.2.4 (VS16 X86 64bit thread safe) + PEAR
+  + phpMyAdmin 5.2.1
+  + OpenSSL 1.1.1p
+  + ADOdb 518a
   + Mercury Mail Transport System v4.62 (nicht in der Portable Version)
   + FileZilla FTP Server 0.9.41 (nicht in der Portable Version)
   + Webalizer 2.23-04 (nicht in der Portable Version)
-  + Strawberry Perl @@BITROCK_PERL_VERSION@@ Portable
-  + Tomcat @@BITROCK_TOMCAT_VERSION@@
-  + XAMPP Control Panel Version @@BITROCK_CONTROL_PANEL_VERSION@@.
+  + Strawberry Perl 5.32.1.1 Portable
+  + Tomcat 8.5.87
+  + XAMPP Control Panel Version 3.3.0.
   + XAMPP mailToDisk 1.0 (schreibt verdendete Mails über PHP auf die Festplatte unter <xampp>\mailoutput. In der php.ini als Mail Default aktiviert.)
 
 ---------------------------------------------------------------
