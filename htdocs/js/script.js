@@ -1,99 +1,120 @@
 let iconObject = L.icon({
-    iconUrl: './img/marker-icon.png', // 마커 아이콘의 이미지 URL
-    shadowSize: [50, 64], // 그림자 크기
-    shadowAnchor: [4, 62], // 그림자 위치
-    iconAnchor: [12, 40] // 아이콘 위치
+    iconUrl: './img/marker-icon.png',
+    shadowSize: [50, 64],
+    shadowAnchor: [4, 62],
+    iconAnchor: [12, 40]
 });
 
 $(document).ready(function (e) {
-    let host; // GraphHopper 서버 호스트 주소
-    let defaultKey = "9db0a28e-4851-433f-86c7-94b8a695fb18"; // 기본 API 키
-    let ghRouting = new GraphHopper.Routing({key: defaultKey, host: host}, {elevation: false}); // GraphHopper 라우팅 객체 생성
+    let host;
+    let defaultKey = "18357858-b79d-4a43-a5e2-11d0f6b21734";
+    let ghRouting = new GraphHopper.Routing({ key: defaultKey, host: host }, { elevation: false });
     let overwriteExistingKey = function () {
-        let key = $("#custom_key_input").val(); // 사용자가 입력한 API 키
+        let key = $("#custom_key_input").val();
         if (key && key !== defaultKey) {
-            $("#custom_key_enabled").show(); // 사용자 정의 키가 있는 경우 표시
-            ghRouting.key = key; // 사용자 정의 키로 라우팅 객체의 키를 업데이트
+            $("#custom_key_enabled").show();
+            ghRouting.key = key;
         } else {
-            $("#custom_key_enabled").hide(); // 사용자 정의 키가 없는 경우 숨김
+            $("#custom_key_enabled").hide();
         }
     };
     overwriteExistingKey();
-    $("#custom_key_button").click(overwriteExistingKey); // 키 설정 버튼 클릭 시 키를 업데이트
-    let routingMap = createMap('routing-map'); // 라우팅 지도 생성
-    setupRoutingAPI(routingMap, ghRouting); // 라우팅 API 설정
-    $('.leaflet-top').css('display','none');
+    $("#custom_key_button").click(overwriteExistingKey);
+    let routingMap = createMap('routing-map');
+    let routingLayer = L.geoJson().addTo(routingMap); // 라우팅 레이어 추가
+    setupRoutingAPI(routingMap, routingLayer, ghRouting); // 라우팅 API 설정
+    $('.leaflet-top').css('display', 'none');
 });
 
-// 라우팅 지도와 GraphHopper 라우팅 객체를 초기화하고 설정하는 함수
-function setupRoutingAPI(map, ghRouting) {
-    map.setView([33.45441, 126.56519], 17); // 지도의 중심 좌표와 줌 레벨 설정
+function setupRoutingAPI(map, routingLayer, ghRouting) { // 라우팅 API 설정 함수 (맵, 라우팅 레이어, GraphHopper 라우팅 객체를 매개변수로 받음)
+    map.setView([33.45441, 126.56519], 17); // 맵의 초기 뷰 설정 (중심 좌표와 줌 레벨)
     let points = []; // 클릭된 지점들의 좌표를 저장할 배열
-    let instructionsDiv = $("#instructions"); // 경로 안내 결과를 표시할 요소
-    map.on('click', function (e) {
-        if (points.length > 1) {
-            points.length = 0; // 저장된 지점 초기화
+    let instructionsDiv = $("#instructions"); // 안내 정보를 표시할 요소
+     let startSelect = document.getElementById("start"); // 출발지 선택 요소
+    let endSelect = document.getElementById("end"); // 도착지 선택 요소
+    map.on('click', function (e) { // 맵 클릭 이벤트 핸들러
+        if (points.length > 1) { // 출발지와 도착지가 이미 선택된 경우
+            points.length = 0; // 배열 비우기
             routingLayer.clearLayers(); // 라우팅 레이어 초기화
         }
-
-        L.marker(e.latlng, {icon: iconObject}).addTo(routingLayer); // 클릭된 지점에 마커 추가
-
-        points.push([e.latlng.lng, e.latlng.lat]); // 클릭된 지점의 좌표를 배열에 추가
-        if (points.length > 1) {
-            ghRouting.doRequest({points: points})
+        if (startSelect.selectedIndex > 0) { // 출발지가 선택되었을 때
+            let startX = parseFloat(startSelect.options[startSelect.selectedIndex].getAttribute("data-x"));
+            let startY = parseFloat(startSelect.options[startSelect.selectedIndex].getAttribute("data-y"));
+            let startLatLng = {
+              lat: parseFloat(startX),
+              lng: parseFloat(startY)
+            };
+            L.marker(startLatLng, { icon: iconObject }).addTo(routingLayer); 
+            points.push([startLatLng.lng,startLatLng.lat]);
+        }
+        if (endSelect.selectedIndex > 0) { // 도착지가 선택되었을 때
+            let endX = parseFloat(endSelect.options[endSelect.selectedIndex].getAttribute("data-x"));
+            let endY = parseFloat(endSelect.options[endSelect.selectedIndex].getAttribute("data-y"));
+            let endLatLng = {
+              lat: parseFloat(endX),
+              lng: parseFloat(endY)
+            };
+            L.marker(endLatLng, { icon: iconObject }).addTo(routingLayer); 
+            points.push([endLatLng.lng, endLatLng.lat]);
+        }else{
+            L.marker(e.latlng, { icon: iconObject }).addTo(routingLayer); // 클릭한 위치에 마커 추가
+            points.push([e.latlng.lng, e.latlng.lat]);
+        }
+        if (points.length > 1) { // 출발지와 도착지가 선택된 경우
+            ghRouting.doRequest({ points: points }) // GraphHopper 라우팅 요청 보내기
                 .then(function (json) {
-                    let path = json.paths[0]; // 경로 정보 가져옴
+                    let path = json.paths[0]; // 경로 정보 가져오기
                     routingLayer.addData({
                         "type": "Feature",
                         "geometry": path.points
                     });
-                    let outHtml = "거리(m):" + path.distance;
-                    outHtml += "<br/>시간(초):" + path.time / 1000;
+                    let outHtml = "거리(m):" + path.distance; // 거리 출력
+                    outHtml += "<br/>시간(초):" + path.time / 1000; // 시간 출력
                     $("#routing-response").html(outHtml);
 
                     if (path.bbox) {
-                        let minLon = path.bbox[0];
+                        let minLon = path.bbox[0]; // 경로의 경계 상자 좌표 가져오기
                         let minLat = path.bbox[1];
                         let maxLon = path.bbox[2];
                         let maxLat = path.bbox[3];
                         let tmpB = new L.LatLngBounds(new L.LatLng(minLat, minLon), new L.LatLng(maxLat, maxLon));
-                        map.fitBounds(tmpB); // 경로가 보여지도록 지도의 범위 조정
+                        map.fitBounds(tmpB); // 지도의 범위를 경로에 맞게 조정
                     }
 
                     instructionsDiv.empty();
                     if (path.instructions) {
-                        let allPoints = path.points.coordinates;
+                        let allPoints = path.points.coordinates; // 모든 경로 지점 좌표 가져오기
                         let listUL = $("<ol>");
                         instructionsDiv.append(listUL);
                         for (let idx in path.instructions) {
-                            let instr = path.instructions[idx];
-                            let instruction_points = allPoints.slice(instr.interval[0], instr.interval[1]);
+                            let instr = path.instructions[idx]; // 경로 안내 정보 가져오기
+                            let instruction_points = allPoints.slice(instr.interval[0], instr.interval[1]); // 경로 안내에 해당하는 지점 좌표 가져오기
                             $("<li>" + instr.text + " <small>(" + ghRouting.getTurnText(instr.sign) + ")</small>"
                                 + " for " + instr.distance + "m and " + Math.round(instr.time / 1000) + "sec"
-                                + ", geometry points:" + instruction_points.length + "</li>").appendTo(listUL);
+                                + ", geometry points:" + instruction_points.length + "</li>").appendTo(listUL); // 안내 정보 표시
                         }
                     }
 
                 })
                 .catch(function (err) {
-                    let str = "오류 발생: " + err.message;
+                    let str = "오류 발생: " + err.message; // 오류 메시지 출력
                     $("#routing-response").text(str);
                 });
         }
     });
 
-    let instructionsHeader = $("#instructions-header");
+    let instructionsHeader = $("#instructions-header"); // 안내 정보의 헤더 요소
     instructionsHeader.click(function () {
-        instructionsDiv.toggle();
+        instructionsDiv.toggle(); // 안내 정보 숨기기/보이기 전환
     });
 
-    let routingLayer = L.geoJson().addTo(map);
-    routingLayer.options = {
-        style: {color: "red", "weight": 5, "opacity": 0.6}
+    routingLayer.options = { // 라우팅 레이어 스타일 설정
+        style: { color: "red", weight: 5, opacity: 0.6 }
     };
 }
 
-// 지도를 생성하고 초기화하는 함수
+
+
 function createMap(divId) {
     let osmAttr = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
@@ -103,8 +124,8 @@ function createMap(divId) {
 
     let map = L.map(divId, {
         layers: [osm],
-        center: [33.45441, 126.56519], // 원하는 중심 좌표
-        zoom: 13 // 원하는 줌 레벨
+        center: [33.45441, 126.56519],
+        zoom: 13
     });
 
     L.control.layers({
