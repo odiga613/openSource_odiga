@@ -22,7 +22,10 @@
 						<img src="./images/menu.svg">
 					</div>
 					<div class="search_input">
-						<input type="text" name="" placeholder="제주대학교 아라캠퍼스">
+						<select name="start" id="search"> <!-- id 추가 -->
+                            <option value="">제주대학교 아라캠퍼스</option>
+                            <?php include './lib/select_list.php'; ?>
+                        </select>
 					</div>
 					<div class="search_icon">
 						<img src="./images/search.svg">
@@ -57,7 +60,7 @@
             </div>
         </div>
         <div class="bottom_btn">
-            <a href="javascript:void(0);" onclick="setOnClick();">목적지 설정</a> <!-- 함수명 수정 -->
+            <p>설정 후 맵을 클릭하세요.</p>
         </div>
     </div>
 </section>

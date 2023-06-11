@@ -1,5 +1,11 @@
 let iconObject = L.icon({
-    iconUrl: './img/marker-icon.png',
+    iconUrl: './img/marker-icon-green.png',
+    shadowSize: [50, 64],
+    shadowAnchor: [4, 62],
+    iconAnchor: [12, 40]
+});
+let iconObject2 = L.icon({
+    iconUrl: './img/marker-icon-red.png',
     shadowSize: [50, 64],
     shadowAnchor: [4, 62],
     iconAnchor: [12, 40]
@@ -24,6 +30,20 @@ $(document).ready(function (e) {
     let routingLayer = L.geoJson().addTo(routingMap); // 라우팅 레이어 추가
     setupRoutingAPI(routingMap, routingLayer, ghRouting); // 라우팅 API 설정
     $('.leaflet-top').css('display', 'none');
+    $("#search").on("change", function(){
+        let search_marker = [];
+        let search = document.getElementById("search");
+        let x = parseFloat(search.options[search.selectedIndex].getAttribute("data-x"));
+        let y = parseFloat(search.options[search.selectedIndex].getAttribute("data-y"));
+        let searchLatLng = {
+            lat: x,
+            lng: y
+        };
+        routingLayer.clearLayers();
+        L.marker(searchLatLng, { icon: iconObject2 }).addTo(routingLayer);
+        search_marker.push(searchLatLng.lng,searchLatLng.lat);
+    });
+    
 });
 
 function setupRoutingAPI(map, routingLayer, ghRouting) { // 라우팅 API 설정 함수 (맵, 라우팅 레이어, GraphHopper 라우팅 객체를 매개변수로 받음)
