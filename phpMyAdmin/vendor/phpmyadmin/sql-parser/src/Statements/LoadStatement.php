@@ -1,4 +1,7 @@
 <?php
+/**
+ * `LOAD` statement.
+ */
 
 declare(strict_types=1);
 
@@ -44,8 +47,7 @@ class LoadStatement extends Statement
     /**
      * Options for `LOAD` statements and their slot ID.
      *
-     * @var array<string, int|array<int, int|string>>
-     * @psalm-var array<string, (positive-int|array{positive-int, ('var'|'var='|'expr'|'expr=')})>
+     * @var array
      */
     public static $OPTIONS = [
         'LOW_PRIORITY' => 1,
@@ -56,8 +58,7 @@ class LoadStatement extends Statement
     /**
      * FIELDS/COLUMNS Options for `LOAD DATA...INFILE` statements.
      *
-     * @var array<string, int|array<int, int|string>>
-     * @psalm-var array<string, (positive-int|array{positive-int, ('var'|'var='|'expr'|'expr=')})>
+     * @var array
      */
     public static $FIELDS_OPTIONS = [
         'TERMINATED BY' => [
@@ -78,8 +79,7 @@ class LoadStatement extends Statement
     /**
      * LINES Options for `LOAD DATA...INFILE` statements.
      *
-     * @var array<string, int|array<int, int|string>>
-     * @psalm-var array<string, (positive-int|array{positive-int, ('var'|'var='|'expr'|'expr=')})>
+     * @var array
      */
     public static $LINES_OPTIONS = [
         'STARTING BY' => [
@@ -95,28 +95,28 @@ class LoadStatement extends Statement
     /**
      * File name being used to load data.
      *
-     * @var Expression|null
+     * @var Expression
      */
     public $file_name;
 
     /**
      * Table used as destination for this statement.
      *
-     * @var Expression|null
+     * @var Expression
      */
     public $table;
 
     /**
      * Partitions used as source for this statement.
      *
-     * @var ArrayObj|null
+     * @var ArrayObj
      */
     public $partition;
 
     /**
      * Character set used in this statement.
      *
-     * @var Expression|null
+     * @var Expression
      */
     public $charset_name;
 
@@ -125,14 +125,14 @@ class LoadStatement extends Statement
      *
      * @see static::$FIELDS_OPTIONS
      *
-     * @var OptionsArray|null
+     * @var OptionsArray
      */
     public $fields_options;
 
     /**
      * Whether to use `FIELDS` or `COLUMNS` while building.
      *
-     * @var string|null
+     * @var string
      */
     public $fields_keyword;
 
@@ -141,42 +141,42 @@ class LoadStatement extends Statement
      *
      * @see static::$LINES_OPTIONS
      *
-     * @var OptionsArray|null
+     * @var OptionsArray
      */
     public $lines_options;
 
     /**
      * Column names or user variables.
      *
-     * @var Expression[]|null
+     * @var Expression[]
      */
     public $col_name_or_user_var;
 
     /**
      * SET clause's updated values(optional).
      *
-     * @var SetOperation[]|null
+     * @var SetOperation[]
      */
     public $set;
 
     /**
      * Ignore 'number' LINES/ROWS.
      *
-     * @var Expression|null
+     * @var Expression
      */
     public $ignore_number;
 
     /**
      * REPLACE/IGNORE Keyword.
      *
-     * @var string|null
+     * @var string
      */
     public $replace_ignore;
 
     /**
      * LINES/ROWS Keyword.
      *
-     * @var string|null
+     * @var string
      */
     public $lines_rows;
 
@@ -247,6 +247,8 @@ class LoadStatement extends Statement
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
+             *
+             * @var Token
              */
             $token = $list->tokens[$list->idx];
 

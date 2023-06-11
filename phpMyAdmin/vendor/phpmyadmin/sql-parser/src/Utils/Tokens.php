@@ -1,4 +1,7 @@
 <?php
+/**
+ * Token utilities.
+ */
 
 declare(strict_types=1);
 
@@ -20,8 +23,8 @@ class Tokens
     /**
      * Checks if a pattern is a match for the specified token.
      *
-     * @param Token                          $token   the token to be matched
-     * @param array<string, int|string|null> $pattern the pattern to be matches
+     * @param Token $token   the token to be matched
+     * @param array $pattern the pattern to be matches
      *
      * @return bool
      */
@@ -53,8 +56,8 @@ class Tokens
 
     /**
      * @param TokensList|string|UtfString $list
-     * @param Token[]                     $find
-     * @param Token[]                     $replace
+     * @param array                       $find
+     * @param array                       $replace
      *
      * @return TokensList
      */
@@ -62,6 +65,8 @@ class Tokens
     {
         /**
          * Whether the first parameter is a list.
+         *
+         * @var bool
          */
         $isList = $list instanceof TokensList;
 
@@ -73,7 +78,7 @@ class Tokens
         /**
          * The list to be returned.
          *
-         * @var Token[]
+         * @var array
          */
         $newList = [];
 
@@ -104,6 +109,8 @@ class Tokens
              *
              * This index might be running faster than `$k` because some tokens
              * are skipped.
+             *
+             * @var int
              */
             $j = $i;
 
@@ -150,6 +157,7 @@ class Tokens
             }
         }
 
-        return $isList ? new TokensList($newList) : TokensList::build($newList);
+        return $isList ?
+            new TokensList($newList) : TokensList::build($newList);
     }
 }

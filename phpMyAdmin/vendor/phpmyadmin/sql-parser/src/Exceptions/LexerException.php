@@ -1,4 +1,7 @@
 <?php
+/**
+ * Exception thrown by the lexer.
+ */
 
 declare(strict_types=1);
 

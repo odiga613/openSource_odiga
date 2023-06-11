@@ -747,9 +747,12 @@ AJAX.registerOnload('config.js', function () {
     });
 
     $(document).on('click', 'div.click-hide-message', function () {
-        $(this).hide();
-        $(this).parent('.card-body').css('height', '');
-        $(this).parent('.card-body').find('.prefs-form').show();
+        $(this)
+            .hide()
+            .parent('.card-body')
+            .css('height', '')
+            .next('form')
+            .show();
     });
 });
 

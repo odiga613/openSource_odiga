@@ -18,17 +18,14 @@
         "source": "https://github.com/code-lts/U2F-php-server"
     },
     "scripts": {
-        "test": "@php phpunit",
-        "phpcs": "@php phpcs",
-        "phpcbf": "@php phpcbf"
+        "phpunit": "./vendor/bin/phpunit"
     },
     "require": {
         "php": "^7.1 || ^8.0",
         "ext-openssl":"*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7 || ^8 || ^9",
-        "wdes/coding-standard": "^3.3"
+        "phpunit/phpunit": "^7 || ^8 || ^9"
     },
     "autoload": {
         "psr-4": { "CodeLts\\U2F\\U2FServer\\": ["src/"] }
@@ -36,15 +33,7 @@
     "autoload-dev": {
         "psr-4": { "CodeLts\\U2F\\U2FServer\\Tests\\": ["test/"] }
     },
-    "config": {
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
-        }
-    },
-    "archive": {
-        "exclude": [
-            "/test",
-            "/phpunit.xml"
-        ]
+    "replace": {
+        "samyoul/u2f-php-server": "*"
     }
 }

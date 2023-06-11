@@ -8,22 +8,12 @@
  */
 
 function showSettings (selector) {
-    var buttons = {
-        [Messages.strApply]: {
-            text: Messages.strApply,
-            class: 'btn btn-primary',
-        },
-        [Messages.strCancel]: {
-            text: Messages.strCancel,
-            class: 'btn btn-secondary',
-        },
-    };
-
-    buttons[Messages.strApply].click = function () {
+    var buttons = {};
+    buttons[Messages.strApply] = function () {
         $('.config-form').trigger('submit');
     };
 
-    buttons[Messages.strCancel].click = function () {
+    buttons[Messages.strCancel] = function () {
         $(this).dialog('close');
     };
 
@@ -31,9 +21,6 @@ function showSettings (selector) {
     var $clone = $(selector + ' .page_settings').clone(true);
     $(selector)
         .dialog({
-            classes: {
-                'ui-dialog-titlebar-close': 'btn-close'
-            },
             title: Messages.strPageSettings,
             width: 700,
             minHeight: 250,

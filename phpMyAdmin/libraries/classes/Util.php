@@ -7,7 +7,6 @@ namespace PhpMyAdmin;
 use PhpMyAdmin\Dbal\ResultInterface;
 use PhpMyAdmin\Html\Generator;
 use PhpMyAdmin\Html\MySQLDocumentation;
-use PhpMyAdmin\Query\Compatibility;
 use PhpMyAdmin\Query\Utilities;
 use PhpMyAdmin\SqlParser\Components\Expression;
 use PhpMyAdmin\SqlParser\Context;
@@ -876,7 +875,11 @@ class Util
         $isBinaryString = $meta->isType(FieldMetadata::TYPE_STRING) && $meta->isBinary();
         // 63 is the binary charset, see: https://dev.mysql.com/doc/internals/en/charsets.html
         $isBlobAndIsBinaryCharset = $meta->isType(FieldMetadata::TYPE_BLOB) && $meta->charsetnr === 63;
-        if ($meta->isNumeric) {
+        // timestamp is numeric on some MySQL 4.1
+        // for real we use CONCAT above and it should compare to string
+        // See commit: 049fc7fef7548c2ba603196937c6dcaf9ff9bf00
+        // See bug: https://sourceforge.net/p/phpmyadmin/bugs/3064/
+        if ($meta->isNumeric && ! $meta->isMappedTypeTimestamp && $meta->isNotType(FieldMetadata::TYPE_REAL)) {
             $conditionValue = '= ' . $row;
         } elseif ($isBlobAndIsBinaryCharset || (! empty($row) && $isBinaryString)) {
             // hexify only if this is a true not empty BLOB or a BINARY
@@ -908,7 +911,7 @@ class Util
                 . self::printableBitValue((int) $row, (int) $meta->length) . "'";
         } else {
             $conditionValue = '= \''
-                . $dbi->escapeString((string) $row) . '\'';
+                . $dbi->escapeString($row) . '\'';
         }
 
         return [$conditionValue, $condition];
@@ -1370,7 +1373,6 @@ class Util
             $binary = false;
             $unsigned = false;
             $zerofill = false;
-            $compressed = false;
         } else {
             $enumSetValues = [];
 
@@ -1392,8 +1394,6 @@ class Util
             $zerofill = ($zerofillCount > 0);
             $printType = (string) preg_replace('@unsigned@', '', $printType, -1, $unsignedCount);
             $unsigned = ($unsignedCount > 0);
-            $printType = (string) preg_replace('@\/\*!100301 compressed\*\/@', '', $printType, -1, $compressedCount);
-            $compressed = ($compressedCount > 0);
             $printType = trim($printType);
         }
 
@@ -1408,14 +1408,6 @@ class Util
 
         if ($zerofill) {
             $attribute = 'UNSIGNED ZEROFILL';
-        }
-
-        if ($compressed) {
-            // With InnoDB page compression, multiple compression algorithms are supported.
-            // In contrast, with InnoDB's COMPRESSED row format, zlib is the only supported compression algorithm.
-            // This means that the COMPRESSED row format has less compression options than InnoDB page compression does.
-            // @see https://mariadb.com/kb/en/innodb-page-compression/#comparison-with-the-compressed-row-format
-            $attribute = 'COMPRESSED=zlib';
         }
 
         $canContainCollation = false;
@@ -1755,14 +1747,6 @@ class Util
     public static function unsupportedDatatypes(): array
     {
         return [];
-    }
-
-    /**
-     * This function is to check whether database support UUID
-     */
-    public static function isUUIDSupported(): bool
-    {
-        return Compatibility::isUUIDSupported($GLOBALS['dbi']);
     }
 
     /**
@@ -2447,10 +2431,6 @@ class Util
 
         if (extension_loaded('mbstring')) {
             $result[] = 'mbstring';
-        }
-
-        if (extension_loaded('sodium')) {
-            $result[] = 'sodium';
         }
 
         return $result;

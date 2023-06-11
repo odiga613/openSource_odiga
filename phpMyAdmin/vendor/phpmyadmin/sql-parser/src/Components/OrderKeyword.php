@@ -1,4 +1,7 @@
 <?php
+/**
+ * `ORDER BY` keyword parser.
+ */
 
 declare(strict_types=1);
 
@@ -44,9 +47,9 @@ class OrderKeyword extends Component
     }
 
     /**
-     * @param Parser               $parser  the parser that serves as context
-     * @param TokensList           $list    the list of tokens that are being parsed
-     * @param array<string, mixed> $options parameters for parsing
+     * @param Parser     $parser  the parser that serves as context
+     * @param TokensList $list    the list of tokens that are being parsed
+     * @param array      $options parameters for parsing
      *
      * @return OrderKeyword[]
      */
@@ -73,6 +76,8 @@ class OrderKeyword extends Component
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
+             *
+             * @var Token
              */
             $token = $list->tokens[$list->idx];
 
@@ -120,7 +125,7 @@ class OrderKeyword extends Component
 
     /**
      * @param OrderKeyword|OrderKeyword[] $component the component to be built
-     * @param array<string, mixed>        $options   parameters for building
+     * @param array                       $options   parameters for building
      *
      * @return string
      */

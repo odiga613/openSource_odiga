@@ -92,7 +92,7 @@ abstract class SchemaPlugin implements Plugin
         return $ret;
     }
 
-    public static function isAvailable(): bool
+    public function isAvailable(): bool
     {
         return true;
     }

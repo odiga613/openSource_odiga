@@ -1,4 +1,7 @@
 <?php
+/**
+ * `WHERE` keyword parser.
+ */
 
 declare(strict_types=1);
 
@@ -24,7 +27,7 @@ class Condition extends Component
     /**
      * Logical operators that can be used to delimit expressions.
      *
-     * @var string[]
+     * @var array
      */
     public static $DELIMITERS = [
         '&&',
@@ -37,7 +40,7 @@ class Condition extends Component
     /**
      * List of allowed reserved keywords in conditions.
      *
-     * @var array<string, int>
+     * @var array
      */
     public static $ALLOWED_KEYWORDS = [
         'ALL' => 1,
@@ -64,7 +67,7 @@ class Condition extends Component
     /**
      * Identifiers recognized.
      *
-     * @var array<int, mixed>
+     * @var array
      */
     public $identifiers = [];
 
@@ -91,9 +94,9 @@ class Condition extends Component
     }
 
     /**
-     * @param Parser               $parser  the parser that serves as context
-     * @param TokensList           $list    the list of tokens that are being parsed
-     * @param array<string, mixed> $options parameters for parsing
+     * @param Parser     $parser  the parser that serves as context
+     * @param TokensList $list    the list of tokens that are being parsed
+     * @param array      $options parameters for parsing
      *
      * @return Condition[]
      */
@@ -124,6 +127,8 @@ class Condition extends Component
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
+             *
+             * @var Token
              */
             $token = $list->tokens[$list->idx];
 
@@ -223,8 +228,8 @@ class Condition extends Component
     }
 
     /**
-     * @param Condition[]          $component the component to be built
-     * @param array<string, mixed> $options   parameters for building
+     * @param Condition[] $component the component to be built
+     * @param array       $options   parameters for building
      *
      * @return string
      */

@@ -35,6 +35,7 @@ use function max;
 use function mb_stripos;
 use function mb_strlen;
 use function mb_strstr;
+use function mb_substr;
 use function md5;
 use function method_exists;
 use function min;
@@ -870,9 +871,9 @@ class InsertEdit
                     . $columnNameAppendix . '" value="' . $type . '">';
             }
 
-            if (in_array($column['True_Type'], ['bit', 'uuid'], true)) {
+            if ($column['True_Type'] === 'bit') {
                 $htmlOutput .= '<input type="hidden" name="fields_type'
-                    . $columnNameAppendix . '" value="' . $column['True_Type'] . '">';
+                    . $columnNameAppendix . '" value="bit">';
             }
         }
 
@@ -1571,6 +1572,10 @@ class InsertEdit
         $funcNoParam,
         $key
     ): string {
+        if (empty($multiEditFuncs[$key])) {
+            return $currentValue;
+        }
+
         if ($multiEditFuncs[$key] === 'PHP_PASSWORD_HASH') {
             /**
              * @see https://github.com/vimeo/psalm/issues/3350
@@ -1579,21 +1584,28 @@ class InsertEdit
              */
             $hash = password_hash($currentValue, PASSWORD_DEFAULT);
 
-            return "'" . $this->dbi->escapeString($hash) . "'";
+            return "'" . $hash . "'";
         }
 
         if ($multiEditFuncs[$key] === 'UUID') {
             /* This way user will know what UUID new row has */
             $uuid = (string) $this->dbi->fetchValue('SELECT UUID()');
 
-            return "'" . $this->dbi->escapeString($uuid) . "'";
+            return "'" . $uuid . "'";
         }
 
         if (
             in_array($multiEditFuncs[$key], $gisFromTextFunctions)
             || in_array($multiEditFuncs[$key], $gisFromWkbFunctions)
         ) {
-            return $multiEditFuncs[$key] . "('" . $this->dbi->escapeString($currentValue) . "')";
+            // Remove enclosing apostrophes
+            $currentValue = mb_substr($currentValue, 1, -1);
+            // Remove escaping apostrophes
+            $currentValue = str_replace("''", "'", $currentValue);
+            // Remove backslash-escaped apostrophes
+            $currentValue = str_replace("\'", "'", $currentValue);
+
+            return $multiEditFuncs[$key] . '(' . $currentValue . ')';
         }
 
         if (
@@ -1610,11 +1622,11 @@ class InsertEdit
                         || $multiEditFuncs[$key] === 'DES_DECRYPT'
                         || $multiEditFuncs[$key] === 'ENCRYPT'))
             ) {
-                return $multiEditFuncs[$key] . "('" . $this->dbi->escapeString($currentValue) . "','"
+                return $multiEditFuncs[$key] . '(' . $currentValue . ",'"
                     . $this->dbi->escapeString($multiEditSalt[$key]) . "')";
             }
 
-            return $multiEditFuncs[$key] . "('" . $this->dbi->escapeString($currentValue) . "')";
+            return $multiEditFuncs[$key] . '(' . $currentValue . ')';
         }
 
         return $multiEditFuncs[$key] . '()';
@@ -1673,10 +1685,10 @@ class InsertEdit
                 . ' = ' . $currentValueAsAnArray;
         } elseif (
             ! (empty($multiEditFuncs[$key])
-                && empty($multiEditColumnsNull[$key])
                 && isset($multiEditColumnsPrev[$key])
-                && $currentValue === $multiEditColumnsPrev[$key])
-            && $currentValueAsAnArray !== ''
+                && (($currentValue === "'" . $this->dbi->escapeString($multiEditColumnsPrev[$key]) . "'")
+                    || ($currentValue === '0x' . $multiEditColumnsPrev[$key])))
+            && $currentValue
         ) {
             // avoid setting a field to NULL when it's already NULL
             // (field had the null checkbox before the update
@@ -1731,6 +1743,10 @@ class InsertEdit
     ): string {
         if ($possiblyUploadedVal !== false) {
             return $possiblyUploadedVal;
+        }
+
+        if (! empty($multiEditFuncs[$key])) {
+            return "'" . $this->dbi->escapeString($currentValue) . "'";
         }
 
         // c o l u m n    v a l u e    i n    t h e    f o r m
@@ -1806,18 +1822,6 @@ class InsertEdit
             && ! isset($multiEditColumnsNull[$key])
         ) {
             $currentValue = "''";
-        }
-
-        // For uuid type, generate uuid value
-        // if empty value but not set null or value is uuid() function
-        if (
-            $type === 'uuid'
-                && ! isset($multiEditColumnsNull[$key])
-                && ($currentValue == "''"
-                    || $currentValue == ''
-                    || $currentValue === "'uuid()'")
-        ) {
-            $currentValue = 'uuid()';
         }
 
         return $currentValue;

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Defines a token along with a set of types and flags and utility functions.
+ *
+ * An array of tokens will result after parsing the query.
+ */
 
 declare(strict_types=1);
 
@@ -12,11 +17,8 @@ use function stripcslashes;
 use function strtoupper;
 
 /**
- * Defines a token along with a set of types and flags and utility functions.
- *
- * An array of tokens will result after parsing the query.
- *
- * A structure representing a lexeme that explicitly indicates its categorization for the purpose of parsing.
+ * A structure representing a lexeme that explicitly indicates its
+ * categorization for the purpose of parsing.
  */
 class Token
 {
@@ -166,7 +168,7 @@ class Token
     /**
      * The keyword value this token contains, always uppercase.
      *
-     * @var mixed|string|null
+     * @var mixed
      */
     public $keyword;
 
@@ -190,7 +192,7 @@ class Token
      * The position is counted in chars, not bytes, so you should
      * use mb_* functions to properly handle utf-8 multibyte chars.
      *
-     * @var int|null
+     * @var int
      */
     public $position;
 

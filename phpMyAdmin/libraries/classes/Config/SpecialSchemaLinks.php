@@ -66,8 +66,7 @@ class SpecialSchemaLinks
     {
         global $cfg;
 
-        $defaultPageDatabase = './' . Util::getScriptNameForOption($cfg['DefaultTabDatabase'], 'database');
-        $defaultPageTable = './' . Util::getScriptNameForOption($cfg['DefaultTabTable'], 'table');
+        $defaultPage = './' . Util::getScriptNameForOption($cfg['DefaultTabTable'], 'table');
 
         return [
             'mysql' => [
@@ -90,7 +89,7 @@ class SpecialSchemaLinks
                                 'column_name' => 'Db',
                             ],
                         ],
-                        'default_page' => $defaultPageTable,
+                        'default_page' => $defaultPage,
                     ],
                     'column_name' => [
                         'link_param' => 'field',
@@ -141,7 +140,7 @@ class SpecialSchemaLinks
                                 'column_name' => 'database_name',
                             ],
                         ],
-                        'default_page' => $defaultPageTable,
+                        'default_page' => $defaultPage,
                     ],
                     'index_name' => [
                         'link_param' => 'index',
@@ -167,7 +166,7 @@ class SpecialSchemaLinks
                                 'column_name' => 'database_name',
                             ],
                         ],
-                        'default_page' => $defaultPageTable,
+                        'default_page' => $defaultPage,
                     ],
                 ],
                 'proc' => [
@@ -257,7 +256,7 @@ class SpecialSchemaLinks
                                 'column_name' => 'Db',
                             ],
                         ],
-                        'default_page' => $defaultPageTable,
+                        'default_page' => $defaultPage,
                     ],
                 ],
                 'user' => [
@@ -283,7 +282,7 @@ class SpecialSchemaLinks
                                 'column_name' => 'table_schema',
                             ],
                         ],
-                        'default_page' => $defaultPageTable,
+                        'default_page' => $defaultPage,
                     ],
                     'column_name' => [
                         'link_param' => 'field',
@@ -309,7 +308,7 @@ class SpecialSchemaLinks
                                 'column_name' => 'constraint_schema',
                             ],
                         ],
-                        'default_page' => $defaultPageTable,
+                        'default_page' => $defaultPage,
                     ],
                     'column_name' => [
                         'link_param' => 'field',
@@ -333,7 +332,7 @@ class SpecialSchemaLinks
                                 'column_name' => 'referenced_table_schema',
                             ],
                         ],
-                        'default_page' => $defaultPageTable,
+                        'default_page' => $defaultPage,
                     ],
                     'referenced_column_name' => [
                         'link_param' => 'field',
@@ -359,7 +358,7 @@ class SpecialSchemaLinks
                                 'column_name' => 'table_schema',
                             ],
                         ],
-                        'default_page' => $defaultPageTable,
+                        'default_page' => $defaultPage,
                     ],
                 ],
                 'processlist' => [
@@ -383,7 +382,7 @@ class SpecialSchemaLinks
                                 'column_name' => 'constraint_schema',
                             ],
                         ],
-                        'default_page' => $defaultPageTable,
+                        'default_page' => $defaultPage,
                     ],
                     'referenced_table_name' => [
                         'link_param' => 'table',
@@ -393,7 +392,7 @@ class SpecialSchemaLinks
                                 'column_name' => 'constraint_schema',
                             ],
                         ],
-                        'default_page' => $defaultPageTable,
+                        'default_page' => $defaultPage,
                     ],
                 ],
                 'routines' => [
@@ -415,7 +414,7 @@ class SpecialSchemaLinks
                 'schemata' => [
                     'schema_name' => [
                         'link_param' => 'db',
-                        'default_page' => $defaultPageDatabase,
+                        'default_page' => $defaultPage,
                     ],
                 ],
                 'statistics' => [
@@ -427,7 +426,7 @@ class SpecialSchemaLinks
                                 'column_name' => 'table_schema',
                             ],
                         ],
-                        'default_page' => $defaultPageTable,
+                        'default_page' => $defaultPage,
                     ],
                     'column_name' => [
                         'link_param' => 'field',
@@ -453,7 +452,7 @@ class SpecialSchemaLinks
                                 'column_name' => 'table_schema',
                             ],
                         ],
-                        'default_page' => $defaultPageTable,
+                        'default_page' => $defaultPage,
                     ],
                 ],
                 'table_constraints' => [
@@ -465,7 +464,7 @@ class SpecialSchemaLinks
                                 'column_name' => 'table_schema',
                             ],
                         ],
-                        'default_page' => $defaultPageTable,
+                        'default_page' => $defaultPage,
                     ],
                 ],
                 'views' => [
@@ -477,7 +476,7 @@ class SpecialSchemaLinks
                                 'column_name' => 'table_schema',
                             ],
                         ],
-                        'default_page' => $defaultPageTable,
+                        'default_page' => $defaultPage,
                     ],
                 ],
             ],

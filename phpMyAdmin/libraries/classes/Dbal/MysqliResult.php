@@ -44,7 +44,7 @@ final class MysqliResult implements ResultInterface
      * Returns a generator that traverses through the whole result set
      * and returns each row as an associative array
      *
-     * @psalm-return Generator<int, array<string, string|null>, mixed, void>
+     * @return Generator<int, array<string, string|null>, mixed, void>
      */
     public function getIterator(): Generator
     {

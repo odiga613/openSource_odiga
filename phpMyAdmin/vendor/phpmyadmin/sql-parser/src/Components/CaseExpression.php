@@ -1,4 +1,7 @@
 <?php
+/**
+ * Parses a reference to a CASE expression.
+ */
 
 declare(strict_types=1);
 
@@ -22,42 +25,42 @@ class CaseExpression extends Component
     /**
      * The value to be compared.
      *
-     * @var Expression|null
+     * @var Expression
      */
     public $value;
 
     /**
      * The conditions in WHEN clauses.
      *
-     * @var Condition[][]
+     * @var array
      */
     public $conditions = [];
 
     /**
      * The results matching with the WHEN clauses.
      *
-     * @var Expression[]
+     * @var array
      */
     public $results = [];
 
     /**
      * The values to be compared against.
      *
-     * @var Expression[]
+     * @var array
      */
     public $compare_values = [];
 
     /**
      * The result in ELSE section of expr.
      *
-     * @var Expression|null
+     * @var Expression
      */
     public $else_result;
 
     /**
      * The alias of this CASE statement.
      *
-     * @var string|null
+     * @var string
      */
     public $alias;
 
@@ -73,9 +76,9 @@ class CaseExpression extends Component
     }
 
     /**
-     * @param Parser               $parser  the parser that serves as context
-     * @param TokensList           $list    the list of tokens that are being parsed
-     * @param array<string, mixed> $options parameters for parsing
+     * @param Parser     $parser  the parser that serves as context
+     * @param TokensList $list    the list of tokens that are being parsed
+     * @param array      $options parameters for parsing
      *
      * @return CaseExpression
      */
@@ -102,6 +105,8 @@ class CaseExpression extends Component
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
+             *
+             * @var Token
              */
             $token = $list->tokens[$list->idx];
 
@@ -261,8 +266,8 @@ class CaseExpression extends Component
     }
 
     /**
-     * @param CaseExpression       $component the component to be built
-     * @param array<string, mixed> $options   parameters for building
+     * @param CaseExpression $component the component to be built
+     * @param array          $options   parameters for building
      *
      * @return string
      */

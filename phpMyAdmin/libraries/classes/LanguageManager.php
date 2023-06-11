@@ -57,7 +57,7 @@ class LanguageManager
             'ar',
             'Arabic',
             '&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;',
-            'ar(?![-_]ly)([-_][[:alpha:]]{2,3})?|arabic',
+            'ar|arabic',
             'ar_AE',
         ],
         'ar_ly' => [
@@ -183,7 +183,7 @@ class LanguageManager
             'en',
             'English',
             '',
-            'en(?![-_]gb)([-_][[:alpha:]]{2,3})?|english',
+            'en|english',
             'en_US',
         ],
         'en_gb' => [
@@ -512,7 +512,7 @@ class LanguageManager
             'pt',
             'Portuguese',
             'Portugu&ecirc;s',
-            'pt(?![-_]br)([-_][[:alpha:]]{2,3})?|portuguese',
+            'pt|portuguese',
             'pt_PT',
         ],
         'pt_br' => [

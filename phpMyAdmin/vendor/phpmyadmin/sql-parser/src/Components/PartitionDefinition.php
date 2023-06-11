@@ -1,4 +1,9 @@
 <?php
+/**
+ * Parses the create definition of a partition.
+ *
+ * Used for parsing `CREATE TABLE` statement.
+ */
 
 declare(strict_types=1);
 
@@ -25,8 +30,7 @@ class PartitionDefinition extends Component
     /**
      * All field options.
      *
-     * @var array<string, int|array<int, int|string>>
-     * @psalm-var array<string, (positive-int|array{positive-int, ('var'|'var='|'expr'|'expr=')})>
+     * @var array
      */
     public static $OPTIONS = [
         'STORAGE ENGINE' => [
@@ -110,9 +114,9 @@ class PartitionDefinition extends Component
     public $options;
 
     /**
-     * @param Parser               $parser  the parser that serves as context
-     * @param TokensList           $list    the list of tokens that are being parsed
-     * @param array<string, mixed> $options parameters for parsing
+     * @param Parser     $parser  the parser that serves as context
+     * @param TokensList $list    the list of tokens that are being parsed
+     * @param array      $options parameters for parsing
      *
      * @return PartitionDefinition
      */
@@ -147,6 +151,8 @@ class PartitionDefinition extends Component
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
+             *
+             * @var Token
              */
             $token = $list->tokens[$list->idx];
 
@@ -227,7 +233,7 @@ class PartitionDefinition extends Component
 
     /**
      * @param PartitionDefinition|PartitionDefinition[] $component the component to be built
-     * @param array<string, mixed>                      $options   parameters for building
+     * @param array                                     $options   parameters for building
      *
      * @return string
      */

@@ -288,11 +288,11 @@ class Google2FA
      **/
     public function oathTruncate($hash)
     {
-        $offset = ord($hash[strlen($hash) - 1]) & 0xF;
+        $offset = ord($hash[strlen($hash) - 1]) & 0xf;
 
         $temp = unpack('N', substr($hash, $offset, 4));
 
-        $temp = $temp[1] & 0x7FFFFFFF;
+        $temp = $temp[1] & 0x7fffffff;
 
         return substr(
             (string) $temp,

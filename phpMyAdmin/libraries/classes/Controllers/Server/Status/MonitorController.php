@@ -49,7 +49,6 @@ class MonitorController extends AbstractController
             'jqplot/plugins/jqplot.byteFormatter.js',
             'server/status/monitor.js',
             'server/status/sorter.js',
-            'chart.js',// Needed by createProfilingChart in server/status/monitor.js
         ]);
 
         $form = [

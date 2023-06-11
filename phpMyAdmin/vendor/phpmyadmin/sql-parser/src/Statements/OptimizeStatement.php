@@ -1,4 +1,7 @@
 <?php
+/**
+ * `OPTIMIZE` statement.
+ */
 
 declare(strict_types=1);
 
@@ -18,8 +21,7 @@ class OptimizeStatement extends Statement
     /**
      * Options of this statement.
      *
-     * @var array<string, int|array<int, int|string>>
-     * @psalm-var array<string, (positive-int|array{positive-int, ('var'|'var='|'expr'|'expr=')})>
+     * @var array
      */
     public static $OPTIONS = [
         'TABLE' => 1,
@@ -31,7 +33,7 @@ class OptimizeStatement extends Statement
     /**
      * Optimized tables.
      *
-     * @var Expression[]|null
+     * @var Expression[]
      */
     public $tables;
 }

@@ -133,14 +133,12 @@ abstract class ExportPlugin implements Plugin
     /**
      * Outputs for raw query
      *
-     * @param string      $errorUrl the url to go back in case of error
-     * @param string|null $db       the database where the query is executed
-     * @param string      $sqlQuery the rawquery to output
-     * @param string      $crlf     the end of line sequence
+     * @param string $errorUrl the url to go back in case of error
+     * @param string $sqlQuery the rawquery to output
+     * @param string $crlf     the seperator for a file
      */
     public function exportRawQuery(
         string $errorUrl,
-        ?string $db,
         string $sqlQuery,
         string $crlf
     ): bool {
@@ -374,7 +372,7 @@ abstract class ExportPlugin implements Plugin
         return $relation;
     }
 
-    public static function isAvailable(): bool
+    public function isAvailable(): bool
     {
         return true;
     }

@@ -997,9 +997,8 @@ APU_DECLARE_NONSTD(void) apr_bucket_free(void *block);
  * @param e The bucket to destroy
  */
 #define apr_bucket_destroy(e) do {					\
-        apr_bucket *apr__d = (e);					\
-        apr__d->type->destroy(apr__d->data);			       	\
-        apr__d->free(apr__d);						\
+        (e)->type->destroy((e)->data);					\
+        (e)->free(e);							\
     } while (0)
 
 /**
@@ -1014,9 +1013,8 @@ APU_DECLARE_NONSTD(void) apr_bucket_free(void *block);
  * @param e The bucket to delete
  */
 #define apr_bucket_delete(e) do {					\
-        apr_bucket *apr__b = (e);					\
-        APR_BUCKET_REMOVE(apr__b);					\
-        apr_bucket_destroy(apr__b);					\
+        APR_BUCKET_REMOVE(e);						\
+        apr_bucket_destroy(e);						\
     } while (0)
 
 /**
@@ -1589,7 +1587,7 @@ APU_DECLARE(apr_status_t) apr_bucket_file_enable_mmap(apr_bucket *b,
  * @remark Relevant/used only when memory-mapping is disabled (@see
  * apr_bucket_file_enable_mmap)
  */
-APU_DECLARE(apr_status_t) apr_bucket_file_set_buf_size(apr_bucket *b,
+APU_DECLARE(apr_status_t) apr_bucket_file_set_buf_size(apr_bucket *e,
                                                        apr_size_t size);
 
 /** @} */

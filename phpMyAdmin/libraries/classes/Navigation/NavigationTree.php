@@ -41,6 +41,7 @@ use function is_object;
 use function mb_strlen;
 use function mb_strpos;
 use function mb_substr;
+use function method_exists;
 use function sort;
 use function sprintf;
 use function strcasecmp;
@@ -1305,10 +1306,11 @@ class NavigationTree
 
             $nodeIsSpecial = in_array($node->realName, self::SPECIAL_NODE_NAMES, true);
 
+            /** @var Node $realParent */
             $realParent = $node->realParent();
             if (
-                $nodeIsContainer && $nodeIsSpecial
-                && $realParent instanceof Node
+                ($nodeIsContainer && $nodeIsSpecial)
+                && method_exists($realParent, 'getPresence')
                 && $realParent->getPresence($node->realName) >= $filterItemMin
             ) {
                 $paths = $node->getPaths();

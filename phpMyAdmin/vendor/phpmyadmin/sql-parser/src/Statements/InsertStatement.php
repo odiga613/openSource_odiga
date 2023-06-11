@@ -1,4 +1,7 @@
 <?php
+/**
+ * `INSERT` statement.
+ */
 
 declare(strict_types=1);
 
@@ -56,8 +59,7 @@ class InsertStatement extends Statement
     /**
      * Options for `INSERT` statements.
      *
-     * @var array<string, int|array<int, int|string>>
-     * @psalm-var array<string, (positive-int|array{positive-int, ('var'|'var='|'expr'|'expr=')})>
+     * @var array
      */
     public static $OPTIONS = [
         'LOW_PRIORITY' => 1,
@@ -69,7 +71,7 @@ class InsertStatement extends Statement
     /**
      * Tables used as target for this statement.
      *
-     * @var IntoKeyword|null
+     * @var IntoKeyword
      */
     public $into;
 
@@ -84,7 +86,7 @@ class InsertStatement extends Statement
      * If SET clause is present
      * holds the SetOperation.
      *
-     * @var SetOperation[]|null
+     * @var SetOperation[]
      */
     public $set;
 
@@ -92,23 +94,15 @@ class InsertStatement extends Statement
      * If SELECT clause is present
      * holds the SelectStatement.
      *
-     * @var SelectStatement|null
+     * @var SelectStatement
      */
     public $select;
-
-    /**
-     * If WITH CTE is present
-     * holds the WithStatement.
-     *
-     * @var WithStatement|null
-     */
-    public $with;
 
     /**
      * If ON DUPLICATE KEY UPDATE clause is present
      * holds the SetOperation.
      *
-     * @var SetOperation[]|null
+     * @var SetOperation[]
      */
     public $onDuplicateSet;
 
@@ -171,6 +165,8 @@ class InsertStatement extends Statement
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
+             *
+             * @var Token
              */
             $token = $list->tokens[$list->idx];
 
@@ -214,8 +210,6 @@ class InsertStatement extends Statement
                     $this->set = SetOperation::parse($parser, $list);
                 } elseif ($token->keyword === 'SELECT') {
                     $this->select = new SelectStatement($parser, $list);
-                } elseif ($token->keyword === 'WITH') {
-                    $this->with = new WithStatement($parser, $list);
                 } else {
                     $parser->error('Unexpected keyword.', $token);
                     break;

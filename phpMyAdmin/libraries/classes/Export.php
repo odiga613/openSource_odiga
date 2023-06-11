@@ -47,8 +47,6 @@ use function time;
 use function trim;
 use function urlencode;
 
-use const ENT_COMPAT;
-
 /**
  * PhpMyAdmin\Export class
  */
@@ -211,7 +209,7 @@ class Export
             }
         } else {
             // We export as html - replace special chars
-            echo htmlspecialchars((string) $line, ENT_COMPAT);
+            echo htmlspecialchars((string) $line);
         }
 
         return true;
@@ -799,7 +797,7 @@ class Export
 
                         $size = (int) $this->dbi->fetchValue($query);
                         //Converting the size to MB
-                        $size /= 1024 * 1024;
+                        $size /= 1024 / 1024;
                         if ($size > $tableSize) {
                             continue;
                         }
@@ -960,7 +958,6 @@ class Export
      * @param ExportPlugin $exportPlugin    the selected export plugin
      * @param string       $crlf            end of line character(s)
      * @param string       $errorUrl        the URL in case of error
-     * @param string|null  $db              the database where the query is executed
      * @param string       $sqlQuery        the query to be executed
      * @param string       $exportType      the export type
      */
@@ -969,7 +966,6 @@ class Export
         ExportPlugin $exportPlugin,
         string $crlf,
         string $errorUrl,
-        ?string $db,
         string $sqlQuery,
         string $exportType
     ): void {
@@ -978,7 +974,7 @@ class Export
             return;
         }
 
-        if (! $exportPlugin->exportRawQuery($errorUrl, $db, $sqlQuery, $crlf)) {
+        if (! $exportPlugin->exportRawQuery($errorUrl, $sqlQuery, $crlf)) {
             $GLOBALS['message'] = Message::error(
                 // phpcs:disable Generic.Files.LineLength.TooLong
                 /* l10n: A query written by the user is a "raw query" that could be using no tables or databases in particular */

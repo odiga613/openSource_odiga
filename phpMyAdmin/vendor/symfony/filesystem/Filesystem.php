@@ -329,8 +329,6 @@ class Filesystem
      */
     public function symlink(string $originDir, string $targetDir, bool $copyOnWindows = false)
     {
-        self::assertFunctionExists('symlink');
-
         if ('\\' === \DIRECTORY_SEPARATOR) {
             $originDir = strtr($originDir, '/', '\\');
             $targetDir = strtr($targetDir, '/', '\\');
@@ -366,8 +364,6 @@ class Filesystem
      */
     public function hardlink(string $originFile, $targetFiles)
     {
-        self::assertFunctionExists('link');
-
         if (!$this->exists($originFile)) {
             throw new FileNotFoundException(null, 0, null, $originFile);
         }
@@ -615,7 +611,7 @@ class Filesystem
      *
      * @return string The new temporary filename (with path), or throw an exception on failure
      */
-    public function tempnam(string $dir, string $prefix/* , string $suffix = '' */)
+    public function tempnam(string $dir, string $prefix/*, string $suffix = ''*/)
     {
         $suffix = \func_num_args() > 2 ? func_get_arg(2) : '';
         [$scheme, $hierarchy] = $this->getSchemeAndHierarchy($dir);
@@ -700,7 +696,7 @@ class Filesystem
      *
      * @throws IOException If the file is not writable
      */
-    public function appendToFile(string $filename, $content/* , bool $lock = false */)
+    public function appendToFile(string $filename, $content/*, bool $lock = false*/)
     {
         if (\is_array($content)) {
             throw new \TypeError(sprintf('Argument 2 passed to "%s()" must be string or resource, array given.', __METHOD__));
@@ -734,22 +730,13 @@ class Filesystem
         return 2 === \count($components) ? [$components[0], $components[1]] : [null, $components[0]];
     }
 
-    private static function assertFunctionExists(string $func): void
-    {
-        if (!\function_exists($func)) {
-            throw new IOException(sprintf('Unable to perform filesystem operation because the "%s()" function has been disabled.', $func));
-        }
-    }
-
     /**
      * @param mixed ...$args
      *
      * @return mixed
      */
-    private static function box(string $func, ...$args)
+    private static function box(callable $func, ...$args)
     {
-        self::assertFunctionExists($func);
-
         self::$lastError = null;
         set_error_handler(__CLASS__.'::handleError');
         try {

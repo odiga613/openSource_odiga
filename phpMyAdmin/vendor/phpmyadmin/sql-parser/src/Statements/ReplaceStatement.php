@@ -1,4 +1,7 @@
 <?php
+/**
+ * `REPLACE` statement.
+ */
 
 declare(strict_types=1);
 
@@ -43,8 +46,7 @@ class ReplaceStatement extends Statement
     /**
      * Options for `REPLACE` statements and their slot ID.
      *
-     * @var array<string, int|array<int, int|string>>
-     * @psalm-var array<string, (positive-int|array{positive-int, ('var'|'var='|'expr'|'expr=')})>
+     * @var array
      */
     public static $OPTIONS = [
         'LOW_PRIORITY' => 1,
@@ -54,14 +56,14 @@ class ReplaceStatement extends Statement
     /**
      * Tables used as target for this statement.
      *
-     * @var IntoKeyword|null
+     * @var IntoKeyword
      */
     public $into;
 
     /**
      * Values to be replaced.
      *
-     * @var Array2d|null
+     * @var Array2d
      */
     public $values;
 
@@ -69,7 +71,7 @@ class ReplaceStatement extends Statement
      * If SET clause is present
      * holds the SetOperation.
      *
-     * @var SetOperation[]|null
+     * @var SetOperation[]
      */
     public $set;
 
@@ -77,7 +79,7 @@ class ReplaceStatement extends Statement
      * If SELECT clause is present
      * holds the SelectStatement.
      *
-     * @var SelectStatement|null
+     * @var SelectStatement
      */
     public $select;
 
@@ -103,8 +105,6 @@ class ReplaceStatement extends Statement
     /**
      * @param Parser     $parser the instance that requests parsing
      * @param TokensList $list   the list of tokens to be parsed
-     *
-     * @return void
      */
     public function parse(Parser $parser, TokensList $list)
     {
@@ -131,6 +131,8 @@ class ReplaceStatement extends Statement
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
+             *
+             * @var Token
              */
             $token = $list->tokens[$list->idx];
 

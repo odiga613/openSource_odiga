@@ -64,10 +64,6 @@ var Console = {
         Functions.configGet('Console', false, (data) => {
             Console.config = data;
             Console.setupAfterInit();
-        }, () => {
-            Console.config = {};// Avoid null pointers in setupAfterInit()
-            // Fetching data failed, still perform the console init
-            Console.setupAfterInit();
         });
     },
 
@@ -183,8 +179,7 @@ var Console = {
             });
 
             $(document).on('ajaxComplete', function (event, xhr, ajaxOptions) {
-                // Not a json body, then skip
-                if (ajaxOptions.dataType && ajaxOptions.dataType.indexOf('json') === -1) {
+                if (ajaxOptions.dataType && ajaxOptions.dataType.indexOf('json') !== -1) {
                     return;
                 }
                 if (xhr.status !== 200) {
@@ -545,7 +540,6 @@ var ConsoleInput = {
         if (ConsoleInput.codeMirror) {
             // eslint-disable-next-line new-cap
             ConsoleInput.inputs.console = CodeMirror($('#pma_console').find('.console_query_input')[0], {
-                // style: cm-s-pma
                 theme: 'pma',
                 mode: 'text/x-sql',
                 lineWrapping: true,
@@ -564,7 +558,6 @@ var ConsoleInput = {
             if ($('#pma_bookmarks').length !== 0) {
                 // eslint-disable-next-line new-cap
                 ConsoleInput.inputs.bookmark = CodeMirror($('#pma_console').find('.bookmark_add_input')[0], {
-                    // style: cm-s-pma
                     theme: 'pma',
                     mode: 'text/x-sql',
                     lineWrapping: true,
@@ -1357,23 +1350,20 @@ var ConsoleDebug = {
             .data('queryInfo', queryInfo)
             .data('totalTime', totalTime);
         if (grouped) {
-            $query.find('span.text.count').removeClass('hide');
-            $query.find('span.text.count span').text(count);
+            $query.find('.text.count').removeClass('hide');
+            $query.find('.text.count span').text(count);
         }
-        $query.find('span.text.time span').text(ConsoleDebug.getQueryTimeTaken(queryTime, totalTime));
+        $query.find('.text.time span').text(queryTime + 's (' + ((queryTime * 100) / totalTime).toFixed(3) + '%)');
 
         return $query;
     },
     appendQueryExtraInfo: function (query, $elem) {
         if ('error' in query) {
             $elem.append(
-                $('<div>').append($('<span class="text-danger">').text(query.error))
+                $('<div>').html(query.error)
             );
         }
         $elem.append(this.formatBackTrace(query.trace));
-    },
-    getQueryTimeTaken: function (queryTime, totalTime) {
-        return queryTime + 's (' + ((queryTime * 100) / totalTime).toFixed(3) + '%)';
     },
     getQueryDetails: function (queryInfo, totalTime, $query) {
         if (Array.isArray(queryInfo)) {
@@ -1383,7 +1373,9 @@ var ConsoleDebug = {
                     .text((parseInt(i) + 1) + '.')
                     .append(
                         $('<span class="time">').text(
-                            Messages.strConsoleDebugTimeTaken + ' ' + ConsoleDebug.getQueryTimeTaken(queryInfo[i].time, totalTime)
+                            Messages.strConsoleDebugTimeTaken +
+                        ' ' + queryInfo[i].time + 's' +
+                        ' (' + ((queryInfo[i].time * 100) / totalTime).toFixed(3) + '%)'
                         )
                     );
                 this.appendQueryExtraInfo(queryInfo[i], $singleQuery);

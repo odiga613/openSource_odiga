@@ -1,4 +1,7 @@
 <?php
+/**
+ * `WITH` keyword builder.
+ */
 
 declare(strict_types=1);
 
@@ -21,7 +24,7 @@ final class WithKeyword extends Component
     /** @var ArrayObj[] */
     public $columns = [];
 
-    /** @var Parser|null */
+    /** @var Parser */
     public $statement;
 
     public function __construct(string $name)
@@ -30,8 +33,8 @@ final class WithKeyword extends Component
     }
 
     /**
-     * @param WithKeyword          $component
-     * @param array<string, mixed> $options
+     * @param WithKeyword $component
+     * @param mixed[]     $options
      *
      * @return string
      */

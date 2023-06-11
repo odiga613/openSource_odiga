@@ -90,7 +90,7 @@ abstract class ImportPlugin implements Plugin
         ];
     }
 
-    public static function isAvailable(): bool
+    public function isAvailable(): bool
     {
         return true;
     }

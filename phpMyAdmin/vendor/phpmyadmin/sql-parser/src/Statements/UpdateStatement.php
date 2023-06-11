@@ -1,4 +1,7 @@
 <?php
+/**
+ * `UPDATE` statement.
+ */
 
 declare(strict_types=1);
 
@@ -31,8 +34,7 @@ class UpdateStatement extends Statement
     /**
      * Options for `UPDATE` statements and their slot ID.
      *
-     * @var array<string, int|array<int, int|string>>
-     * @psalm-var array<string, (positive-int|array{positive-int, ('var'|'var='|'expr'|'expr=')})>
+     * @var array
      */
     public static $OPTIONS = [
         'LOW_PRIORITY' => 1,
@@ -44,8 +46,7 @@ class UpdateStatement extends Statement
      *
      * @see Statement::$CLAUSES
      *
-     * @var array<string, array<int, int|string>>
-     * @psalm-var array<string, array{non-empty-string, (1|2|3)}>
+     * @var array
      */
     public static $CLAUSES = [
         'UPDATE' => [
@@ -83,35 +84,35 @@ class UpdateStatement extends Statement
     /**
      * Tables used as sources for this statement.
      *
-     * @var Expression[]|null
+     * @var Expression[]
      */
     public $tables;
 
     /**
      * The updated values.
      *
-     * @var SetOperation[]|null
+     * @var SetOperation[]
      */
     public $set;
 
     /**
      * Conditions used for filtering each row of the result set.
      *
-     * @var Condition[]|null
+     * @var Condition[]
      */
     public $where;
 
     /**
      * Specifies the order of the rows in the result set.
      *
-     * @var OrderKeyword[]|null
+     * @var OrderKeyword[]
      */
     public $order;
 
     /**
      * Conditions used for limiting the size of the result set.
      *
-     * @var Limit|null
+     * @var Limit
      */
     public $limit;
 }

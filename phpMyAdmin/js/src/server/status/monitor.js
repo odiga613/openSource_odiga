@@ -21,31 +21,16 @@ var chartSize;
 var monitorSettings;
 
 function serverResponseError () {
-    var btns = {
-        [Messages.strReloadPage]: {
-            text: Messages.strReloadPage,
-            class: 'btn btn-primary',
-            click: function () {
-                window.location.reload();
-            },
-        },
+    var btns = {};
+    btns[Messages.strReloadPage] = function () {
+        window.location.reload();
     };
-    $('#emptyDialog').dialog({
-        classes: {
-            'ui-dialog-titlebar-close': 'btn-close'
-        },
-        title: Messages.strRefreshFailed
-    });
+    $('#emptyDialog').dialog({ title: Messages.strRefreshFailed });
     $('#emptyDialog').html(
         Functions.getImage('s_attention') +
         Messages.strInvalidResponseExplanation
     );
-    $('#emptyDialog').dialog({
-        classes: {
-            'ui-dialog-titlebar-close': 'btn-close'
-        },
-        buttons: btns
-    });
+    $('#emptyDialog').dialog({ buttons: btns });
 }
 
 /**
@@ -116,7 +101,9 @@ AJAX.registerOnload('server/status/monitor.js', function () {
             var $cnt = $(this);
             var pos = $cnt.offset();
             // Hide if the mouseclick is outside the popupcontent
-            if (event.pageX > pos.left + $cnt.outerWidth() ||
+            if (event.pageX < pos.left ||
+                event.pageY < pos.top ||
+                event.pageX > pos.left + $cnt.outerWidth() ||
                 event.pageY > pos.top + $cnt.outerHeight()
             ) {
                 $cnt.hide().removeClass('openedPopup');
@@ -276,15 +263,15 @@ AJAX.registerOnload('server/status/monitor.js', function () {
             'memory': {
                 title: Messages.strSystemMemory,
                 series: [{
+                    label: Messages.strTotalMemory,
+                    fill: true
+                }, {
                     dataType: 'memory',
                     label: Messages.strUsedMemory,
                     fill: true
-                }, {
-                    label: Messages.strFreeMemory,
-                    fill: true
                 }],
-                nodes: [{ dataPoints: [{ type: 'memory', name: 'MemUsed' }], valueDivisor: 1024 },
-                    { dataPoints: [{ type: 'memory', name: 'MemFree' }], valueDivisor: 1024 }
+                nodes: [{ dataPoints: [{ type: 'memory', name: 'MemTotal' }], valueDivisor: 1024 },
+                    { dataPoints: [{ type: 'memory', name: 'MemUsed' }], valueDivisor: 1024 }
                 ],
                 maxYLabel: 0
             },
@@ -292,14 +279,14 @@ AJAX.registerOnload('server/status/monitor.js', function () {
             'swap': {
                 title: Messages.strSystemSwap,
                 series: [{
-                    label: Messages.strUsedSwap,
+                    label: Messages.strTotalSwap,
                     fill: true
                 }, {
-                    label: Messages.strFreeSwap,
+                    label: Messages.strUsedSwap,
                     fill: true
                 }],
-                nodes: [{ dataPoints: [{ type: 'memory', name: 'SwapUsed' }], valueDivisor: 1024 },
-                    { dataPoints: [{ type: 'memory', name: 'SwapFree' }], valueDivisor: 1024 }
+                nodes: [{ dataPoints: [{ type: 'memory', name: 'SwapTotal' }] },
+                    { dataPoints: [{ type: 'memory', name: 'SwapUsed' }] }
                 ],
                 maxYLabel: 0
             }
@@ -651,27 +638,13 @@ AJAX.registerOnload('server/status/monitor.js', function () {
 
     $('a[href="#importMonitorConfig"]').on('click', function (event) {
         event.preventDefault();
-        $('#emptyDialog').dialog({
-            classes: {
-                'ui-dialog-titlebar-close': 'btn-close'
-            },
-            title: Messages.strImportDialogTitle
-        });
-        $('#emptyDialog').html(Messages.strImportDialogMessage + '<br><form>' +
+        $('#emptyDialog').dialog({ title: Messages.strImportDialogTitle });
+        $('#emptyDialog').html(Messages.strImportDialogMessage + ':<br><form>' +
             '<input type="file" name="file" id="import_file"> </form>');
 
-        var dlgBtns = {
-            [Messages.strImport]: {
-                text: Messages.strImport,
-                class: 'btn btn-primary',
-            },
-            [Messages.strCancel]: {
-                text: Messages.strCancel,
-                class: 'btn btn-secondary',
-            },
-        };
+        var dlgBtns = {};
 
-        dlgBtns[Messages.strImport].click = function () {
+        dlgBtns[Messages.strImport] = function () {
             var input = $('#emptyDialog').find('#import_file')[0];
             var reader = new FileReader();
 
@@ -719,14 +692,11 @@ AJAX.registerOnload('server/status/monitor.js', function () {
             reader.readAsText(input.files[0]);
         };
 
-        dlgBtns[Messages.strCancel].click = function () {
+        dlgBtns[Messages.strCancel] = function () {
             $(this).dialog('close');
         };
 
         $('#emptyDialog').dialog({
-            classes: {
-                'ui-dialog-titlebar-close': 'btn-close'
-            },
             width: 'auto',
             height: 'auto',
             buttons: dlgBtns
@@ -763,19 +733,11 @@ AJAX.registerOnload('server/status/monitor.js', function () {
         event.preventDefault();
 
         var $dialog = $('#monitorInstructionsDialog');
-        var dlgBtns = {
-            [Messages.strClose]: {
-                text: Messages.strClose,
-                class: 'btn btn-primary',
-                click: function () {
-                    $(this).dialog('close');
-                }
-            },
+        var dlgBtns = {};
+        dlgBtns[Messages.strClose] = function () {
+            $(this).dialog('close');
         };
         $dialog.dialog({
-            classes: {
-                'ui-dialog-titlebar-close': 'btn-close'
-            },
             width: '60%',
             height: 'auto',
             buttons: dlgBtns
@@ -1044,28 +1006,15 @@ AJAX.registerOnload('server/status/monitor.js', function () {
                 && typeof window.localStorage.monitorVersion !== 'undefined'
                 && monitorProtocolVersion !== window.localStorage.monitorVersion
             ) {
-                $('#emptyDialog').dialog({
-                    classes: {
-                        'ui-dialog-titlebar-close': 'btn-close'
-                    },
-                    title: Messages.strIncompatibleMonitorConfig
-                });
+                $('#emptyDialog').dialog({ title: Messages.strIncompatibleMonitorConfig });
                 $('#emptyDialog').html(Messages.strIncompatibleMonitorConfigDescription);
 
-                var dlgBtns = {
-                    [Messages.strClose]: {
-                        text: Messages.strClose,
-                        class: 'btn btn-primary',
-                        click: function () {
-                            $(this).dialog('close');
-                        }
-                    },
+                var dlgBtns = {};
+                dlgBtns[Messages.strClose] = function () {
+                    $(this).dialog('close');
                 };
 
                 $('#emptyDialog').dialog({
-                    classes: {
-                        'ui-dialog-titlebar-close': 'btn-close'
-                    },
                     width: 400,
                     buttons: dlgBtns
                 });
@@ -1159,7 +1108,7 @@ AJAX.registerOnload('server/status/monitor.js', function () {
         var windowWidth = $(window).width();
 
         if (windowWidth > 768) {
-            wdt = (panelWidth - monitorSettings.columns * Math.abs(chartSpacing.width)) / monitorSettings.columns;
+            wdt = (panelWidth - monitorSettings.columns * chartSpacing.width) / monitorSettings.columns;
         }
 
         chartSize = {
@@ -1424,31 +1373,19 @@ AJAX.registerOnload('server/status/monitor.js', function () {
         $dateStart.prop('readonly', true);
         $dateEnd.prop('readonly', true);
 
-        var dlgBtns = {
-            [Messages.strFromSlowLog]: {
-                text: Messages.strFromSlowLog,
-                class: 'btn btn-secondary',
-            },
-            [Messages.strFromGeneralLog]: {
-                text: Messages.strFromGeneralLog,
-                class: 'btn btn-secondary',
-            },
-        };
+        var dlgBtns = { };
 
-        dlgBtns[Messages.strFromSlowLog].click = function () {
+        dlgBtns[Messages.strFromSlowLog] = function () {
             loadLog('slow', min, max);
             $(this).dialog('close');
         };
 
-        dlgBtns[Messages.strFromGeneralLog].click = function () {
+        dlgBtns[Messages.strFromGeneralLog] = function () {
             loadLog('general', min, max);
             $(this).dialog('close');
         };
 
         $logAnalyseDialog.dialog({
-            classes: {
-                'ui-dialog-titlebar-close': 'btn-close'
-            },
             width: 'auto',
             height: 'auto',
             buttons: dlgBtns
@@ -1702,24 +1639,13 @@ AJAX.registerOnload('server/status/monitor.js', function () {
             opts.limitTypes = false;
         }
 
-        $('#emptyDialog').dialog({
-            classes: {
-                'ui-dialog-titlebar-close': 'btn-close'
-            },
-            title: Messages.strAnalysingLogsTitle
-        });
+        $('#emptyDialog').dialog({ title: Messages.strAnalysingLogsTitle });
         $('#emptyDialog').html(Messages.strAnalysingLogs +
                                 ' <img class="ajaxIcon" src="' + themeImagePath +
                                 'ajax_clock_small.gif" alt="">');
+        var dlgBtns = {};
 
-        var dlgBtns = {
-            [Messages.strCancelRequest]: {
-                text: Messages.strCancelRequest,
-                class: 'btn btn-primary',
-            },
-        };
-
-        dlgBtns[Messages.strCancelRequest].click = function () {
+        dlgBtns[Messages.strCancelRequest] = function () {
             if (logRequest !== null) {
                 logRequest.abort();
             }
@@ -1728,9 +1654,6 @@ AJAX.registerOnload('server/status/monitor.js', function () {
         };
 
         $('#emptyDialog').dialog({
-            classes: {
-                'ui-dialog-titlebar-close': 'btn-close'
-            },
             width: 'auto',
             height: 'auto',
             buttons: dlgBtns
@@ -1752,12 +1675,7 @@ AJAX.registerOnload('server/status/monitor.js', function () {
             },
             function (data) {
                 var logData;
-                var dlgBtns = {
-                    [Messages.strClose]: {
-                        text: Messages.strClose,
-                        class: 'btn btn-primary',
-                    },
-                };
+                var dlgBtns = {};
                 if (typeof data !== 'undefined' && data.success === true) {
                     logData = data.message;
                 } else {
@@ -1765,15 +1683,10 @@ AJAX.registerOnload('server/status/monitor.js', function () {
                 }
 
                 if (logData.rows.length === 0) {
-                    $('#emptyDialog').dialog({
-                        classes: {
-                            'ui-dialog-titlebar-close': 'btn-close'
-                        },
-                        title: Messages.strNoDataFoundTitle,
-                    });
+                    $('#emptyDialog').dialog({ title: Messages.strNoDataFoundTitle });
                     $('#emptyDialog').html('<p>' + Messages.strNoDataFound + '</p>');
 
-                    dlgBtns[Messages.strClose].click = function () {
+                    dlgBtns[Messages.strClose] = function () {
                         $(this).dialog('close');
                     };
 
@@ -1784,12 +1697,7 @@ AJAX.registerOnload('server/status/monitor.js', function () {
                 runtime.logDataCols = buildLogTable(logData, opts.removeVariables);
 
                 /* Show some stats in the dialog */
-                $('#emptyDialog').dialog({
-                    classes: {
-                        'ui-dialog-titlebar-close': 'btn-close'
-                    },
-                    title: Messages.strLoadingLogs
-                });
+                $('#emptyDialog').dialog({ title: Messages.strLoadingLogs });
                 $('#emptyDialog').html('<p>' + Messages.strLogDataLoaded + '</p>');
                 $.each(logData.sum, function (key, value) {
                     var newKey = key.charAt(0).toUpperCase() + key.slice(1).toLowerCase();
@@ -1827,13 +1735,9 @@ AJAX.registerOnload('server/status/monitor.js', function () {
                     }
                 }
 
-                dlgBtns[Messages.strJumpToTable] = {
-                    text: Messages.strJumpToTable,
-                    class: 'btn btn-secondary',
-                    click: function () {
-                        $(this).dialog('close');
-                        $(document).scrollTop($('#logTable').offset().top);
-                    },
+                dlgBtns[Messages.strJumpToTable] = function () {
+                    $(this).dialog('close');
+                    $(document).scrollTop($('#logTable').offset().top);
                 };
 
                 $('#emptyDialog').dialog('option', 'buttons', dlgBtns);
@@ -1898,7 +1802,7 @@ AJAX.registerOnload('server/status/monitor.js', function () {
             };
 
             // We just assume the sql text is always in the second last column, and that the total count is right of it
-            $('#logTable').find('table tbody tr td.queryCell').each(function () {
+            $('#logTable').find('table tbody tr').children('td').eq(runtime.logDataCols.length - 2).each(function () {
                 var $t = $(this);
                 // If query is a SELECT and user enabled or disabled to group
                 // queries ignoring data in where statements, we
@@ -2030,7 +1934,7 @@ AJAX.registerOnload('server/status/monitor.js', function () {
     function buildLogTable (data, groupInserts) {
         var rows = data.rows;
         var cols = [];
-        var $table = $('<table class="table table-striped table-hover align-middle sortable"></table>');
+        var $table = $('<table class="table table-light table-striped table-hover align-middle sortable"></table>');
         var $tBody;
         var $tRow;
         var $tCell;
@@ -2063,7 +1967,7 @@ AJAX.registerOnload('server/status/monitor.js', function () {
             for (var j = 0, ll = cols.length; j < ll; j++) {
                 // Assuming the query column is the second last
                 if (j === cols.length - 2 && rows[i][cols[j]].match(/^SELECT/i)) {
-                    $tRow.append($tCell = $('<td class="linkElem queryCell">' + formatValue(cols[j], rows[i][cols[j]]) + '</td>'));
+                    $tRow.append($tCell = $('<td class="linkElem">' + formatValue(cols[j], rows[i][cols[j]]) + '</td>'));
                     $tCell.on('click', openQueryAnalyzer);
                 } else {
                     $tRow.append('<td>' + formatValue(cols[j], rows[i][cols[j]]) + '</td>');
@@ -2124,28 +2028,16 @@ AJAX.registerOnload('server/status/monitor.js', function () {
         }
 
         var profilingChart = null;
-        var dlgBtns = {
-            [Messages.strAnalyzeQuery]: {
-                text: Messages.strAnalyzeQuery,
-                class: 'btn btn-primary',
-            },
-            [Messages.strClose]: {
-                text: Messages.strClose,
-                class: 'btn btn-secondary',
-            },
-        };
+        var dlgBtns = {};
 
-        dlgBtns[Messages.strAnalyzeQuery].click = function () {
+        dlgBtns[Messages.strAnalyzeQuery] = function () {
             profilingChart = loadQueryAnalysis(rowData);
         };
-        dlgBtns[Messages.strClose].click = function () {
+        dlgBtns[Messages.strClose] = function () {
             $(this).dialog('close');
         };
 
         $('#queryAnalyzerDialog').dialog({
-            classes: {
-                'ui-dialog-titlebar-close': 'btn-close'
-            },
             width: 'auto',
             height: 'auto',
             resizable: false,
@@ -2240,7 +2132,7 @@ AJAX.registerOnload('server/status/monitor.js', function () {
 
             if (data.profiling) {
                 var chartData = [];
-                var numberTable = '<table class="table table-sm table-striped table-hover w-auto queryNums"><thead><tr><th>' + Messages.strStatus + '</th><th>' + Messages.strTime + '</th></tr></thead><tbody>';
+                var numberTable = '<table class="table table-sm table-light table-striped table-hover w-auto queryNums"><thead><tr><th>' + Messages.strStatus + '</th><th>' + Messages.strTime + '</th></tr></thead><tbody>';
                 var duration;
                 var otherTime = 0;
 

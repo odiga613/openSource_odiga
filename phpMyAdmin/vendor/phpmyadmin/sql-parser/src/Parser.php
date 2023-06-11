@@ -1,4 +1,9 @@
 <?php
+/**
+ * Defines the parser of the library.
+ *
+ * This is one of the most important components, along with the lexer.
+ */
 
 declare(strict_types=1);
 
@@ -12,18 +17,15 @@ use function is_string;
 use function strtoupper;
 
 /**
- * Defines the parser of the library.
- *
- * This is one of the most important components, along with the lexer.
- *
- * Takes multiple tokens (contained in a Lexer instance) as input and builds a parse tree.
+ * Takes multiple tokens (contained in a Lexer instance) as input and builds a
+ * parse tree.
  */
 class Parser extends Core
 {
     /**
      * Array of classes that are used in parsing the SQL statements.
      *
-     * @var array<string, string>
+     * @var array
      */
     public static $STATEMENT_PARSERS = [
         // MySQL Utility Statements
@@ -97,8 +99,7 @@ class Parser extends Core
     /**
      * Array of classes that are used in parsing SQL components.
      *
-     * @var array<string, array<string, string|array<string, string>>>
-     * @psalm-var array<string, array{class?: string, field?: non-empty-string, options?: array<string, string>}>
+     * @var array
      */
     public static $KEYWORD_PARSERS = [
         // This is not a proper keyword and was added here to help the
@@ -337,7 +338,7 @@ class Parser extends Core
     /**
      * The list of tokens that are parsed.
      *
-     * @var TokensList|null
+     * @var TokensList
      */
     public $list;
 
@@ -356,8 +357,8 @@ class Parser extends Core
     public $brackets = 0;
 
     /**
-     * @param string|UtfString|TokensList|null $list   the list of tokens to be parsed
-     * @param bool                             $strict whether strict mode should be enabled or not
+     * @param string|UtfString|TokensList $list   the list of tokens to be parsed
+     * @param bool                        $strict whether strict mode should be enabled or not
      */
     public function __construct($list = null, $strict = false)
     {
@@ -379,8 +380,6 @@ class Parser extends Core
 
     /**
      * Builds the parse trees.
-     *
-     * @return void
      *
      * @throws ParserException
      */
@@ -416,12 +415,16 @@ class Parser extends Core
 
         /**
          * The list of tokens.
+         *
+         * @var TokensList
          */
         $list = &$this->list;
 
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
+             *
+             * @var Token
              */
             $token = $list->tokens[$list->idx];
 
@@ -466,40 +469,19 @@ class Parser extends Core
                 continue;
             }
 
-            $lastIdx = $list->idx;
-            $statementName = null;
-
-            if ($token->keyword === 'ANALYZE') {
-                ++$list->idx; // Skip ANALYZE
-
-                $first = $list->getNextOfType(Token::TYPE_KEYWORD);
-                $second = $list->getNextOfType(Token::TYPE_KEYWORD);
-
-                // ANALYZE keyword can be an indication of two cases:
-                // 1 - ANALYZE TABLE statements, in both MariaDB and MySQL
-                // 2 - Explain statement, in case of MariaDB https://mariadb.com/kb/en/explain-analyze/
-                // We need to point case 2 to use the EXPLAIN Parser.
-                $statementName = 'EXPLAIN';
-                if (($first && $first->keyword === 'TABLE') || ($second && $second->keyword === 'TABLE')) {
-                    $statementName = 'ANALYZE';
+            // Checking if it is a known statement that can be parsed.
+            if (empty(static::$STATEMENT_PARSERS[$token->keyword])) {
+                if (! isset(static::$STATEMENT_PARSERS[$token->keyword])) {
+                    // A statement is considered recognized if the parser
+                    // is aware that it is a statement, but it does not have
+                    // a parser for it yet.
+                    $this->error('Unrecognized statement type.', $token);
                 }
 
-                $list->idx = $lastIdx;
-            } else {
-                // Checking if it is a known statement that can be parsed.
-                if (empty(static::$STATEMENT_PARSERS[$token->keyword])) {
-                    if (! isset(static::$STATEMENT_PARSERS[$token->keyword])) {
-                        // A statement is considered recognized if the parser
-                        // is aware that it is a statement, but it does not have
-                        // a parser for it yet.
-                        $this->error('Unrecognized statement type.', $token);
-                    }
-
-                    // Skipping to the end of this statement.
-                    $list->getNextOfType(Token::TYPE_DELIMITER);
-                    $prevLastIdx = $list->idx;
-                    continue;
-                }
+                // Skipping to the end of this statement.
+                $list->getNextOfType(Token::TYPE_DELIMITER);
+                $prevLastIdx = $list->idx;
+                continue;
             }
 
             /**
@@ -507,7 +489,7 @@ class Parser extends Core
              *
              * @var string
              */
-            $class = static::$STATEMENT_PARSERS[$statementName ?? $token->keyword];
+            $class = static::$STATEMENT_PARSERS[$token->keyword];
 
             /**
              * Processed statement.
@@ -613,8 +595,6 @@ class Parser extends Core
      * @param string $msg   the error message
      * @param Token  $token the token that produced the error
      * @param int    $code  the code of the error
-     *
-     * @return void
      *
      * @throws ParserException throws the exception, if strict mode is enabled.
      */

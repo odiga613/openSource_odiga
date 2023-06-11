@@ -543,7 +543,7 @@ class ExportXml extends ExportPlugin
         $this->tables = $tables;
     }
 
-    public static function isAvailable(): bool
+    public function isAvailable(): bool
     {
         global $db;
 

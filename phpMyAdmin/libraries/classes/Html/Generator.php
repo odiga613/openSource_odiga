@@ -54,6 +54,7 @@ use function strlen;
 use function strtoupper;
 use function substr;
 use function trim;
+use function urlencode;
 
 use const ENT_COMPAT;
 
@@ -92,7 +93,6 @@ class Generator
         $kbs = ServerVariablesProvider::getImplementation();
         $link = $useMariaDB ? $kbs->getDocLinkByNameMariaDb($name) :
                             $kbs->getDocLinkByNameMysql($name);
-        $link = $link !== null ? Core::linkURL($link) : $link;
 
         return MySQLDocumentation::show($name, false, $link, $text);
     }
@@ -308,11 +308,6 @@ class Generator
             && $field['Null'] === 'NO'
         ) {
             $defaultFunction = $cfg['DefaultFunctions']['first_timestamp'];
-        }
-
-        // For uuid field, no default function
-        if ($field['True_Type'] === 'uuid') {
-            return '';
         }
 
         // For primary keys of type char(36) or varchar(36) UUID if the default
@@ -644,6 +639,18 @@ class Generator
                             $explainParams,
                             __('Skip Explain SQL')
                         ) . ']';
+                    $url = 'https://mariadb.org/explain_analyzer/analyze/'
+                        . '?client=phpMyAdmin&raw_explain='
+                        . urlencode(self::generateRowQueryOutput($sqlQuery));
+                    $explainLink .= ' ['
+                        . self::linkOrButton(
+                            htmlspecialchars('url.php?url=' . urlencode($url)),
+                            null,
+                            sprintf(__('Analyze Explain at %s'), 'mariadb.org'),
+                            [],
+                            '_blank',
+                            false
+                        ) . '&nbsp;]';
                 }
             }
 

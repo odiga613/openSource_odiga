@@ -19,7 +19,6 @@ use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
 
 use function __;
-use function is_array;
 use function is_object;
 use function json_decode;
 use function json_encode;
@@ -42,10 +41,7 @@ class Key extends TwoFactorPlugin
     public function __construct(TwoFactor $twofactor)
     {
         parent::__construct($twofactor);
-        if (
-            isset($this->twofactor->config['settings']['registrations'])
-            && is_array($this->twofactor->config['settings']['registrations'])
-        ) {
+        if (isset($this->twofactor->config['settings']['registrations'])) {
             return;
         }
 
@@ -55,7 +51,7 @@ class Key extends TwoFactorPlugin
     /**
      * Returns array of U2F registration objects
      *
-     * @return stdClass[]
+     * @return array
      */
     public function getRegistrations()
     {
@@ -215,6 +211,6 @@ class Key extends TwoFactorPlugin
      */
     public static function getDescription()
     {
-        return __('Provides authentication using hardware security tokens supporting FIDO U2F, such as a YubiKey.');
+        return __('Provides authentication using hardware security tokens supporting FIDO U2F, such as a Yubikey.');
     }
 }

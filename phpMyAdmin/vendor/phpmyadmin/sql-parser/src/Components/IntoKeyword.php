@@ -1,4 +1,7 @@
 <?php
+/**
+ * `INTO` keyword parser.
+ */
 
 declare(strict_types=1);
 
@@ -22,8 +25,7 @@ class IntoKeyword extends Component
     /**
      * FIELDS/COLUMNS Options for `SELECT...INTO` statements.
      *
-     * @var array<string, int|array<int, int|string>>
-     * @psalm-var array<string, (positive-int|array{positive-int, ('var'|'var='|'expr'|'expr=')})>
+     * @var array
      */
     public static $FIELDS_OPTIONS = [
         'TERMINATED BY' => [
@@ -44,8 +46,7 @@ class IntoKeyword extends Component
     /**
      * LINES Options for `SELECT...INTO` statements.
      *
-     * @var array<string, int|array<int, int|string>>
-     * @psalm-var array<string, (positive-int|array{positive-int, ('var'|'var='|'expr'|'expr=')})>
+     * @var array
      */
     public static $LINES_OPTIONS = [
         'STARTING BY' => [
@@ -61,28 +62,28 @@ class IntoKeyword extends Component
     /**
      * Type of target (OUTFILE or SYMBOL).
      *
-     * @var string|null
+     * @var string
      */
     public $type;
 
     /**
      * The destination, which can be a table or a file.
      *
-     * @var string|Expression|null
+     * @var string|Expression
      */
     public $dest;
 
     /**
      * The name of the columns.
      *
-     * @var string[]|null
+     * @var array
      */
     public $columns;
 
     /**
      * The values to be selected into (SELECT .. INTO @var1).
      *
-     * @var Expression[]|null
+     * @var Expression[]
      */
     public $values;
 
@@ -91,14 +92,14 @@ class IntoKeyword extends Component
      *
      * @see static::$FIELDS_OPTIONS
      *
-     * @var OptionsArray|null
+     * @var OptionsArray
      */
     public $fields_options;
 
     /**
      * Whether to use `FIELDS` or `COLUMNS` while building.
      *
-     * @var bool|null
+     * @var bool
      */
     public $fields_keyword;
 
@@ -107,17 +108,17 @@ class IntoKeyword extends Component
      *
      * @see static::$LINES_OPTIONS
      *
-     * @var OptionsArray|null
+     * @var OptionsArray
      */
     public $lines_options;
 
     /**
-     * @param string|null            $type          type of destination (may be OUTFILE)
-     * @param string|Expression|null $dest          actual destination
-     * @param string[]|null          $columns       column list of destination
-     * @param Expression[]|null      $values        selected fields
-     * @param OptionsArray|null      $fieldsOptions options for FIELDS/COLUMNS keyword
-     * @param bool|null              $fieldsKeyword options for OPTIONS keyword
+     * @param string            $type          type of destination (may be OUTFILE)
+     * @param string|Expression $dest          actual destination
+     * @param array             $columns       column list of destination
+     * @param array             $values        selected fields
+     * @param OptionsArray      $fieldsOptions options for FIELDS/COLUMNS keyword
+     * @param bool              $fieldsKeyword options for OPTIONS keyword
      */
     public function __construct(
         $type = null,
@@ -136,9 +137,9 @@ class IntoKeyword extends Component
     }
 
     /**
-     * @param Parser               $parser  the parser that serves as context
-     * @param TokensList           $list    the list of tokens that are being parsed
-     * @param array<string, mixed> $options parameters for parsing
+     * @param Parser     $parser  the parser that serves as context
+     * @param TokensList $list    the list of tokens that are being parsed
+     * @param array      $options parameters for parsing
      *
      * @return IntoKeyword
      */
@@ -165,6 +166,8 @@ class IntoKeyword extends Component
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
+             *
+             * @var Token
              */
             $token = $list->tokens[$list->idx];
 
@@ -263,8 +266,8 @@ class IntoKeyword extends Component
     }
 
     /**
-     * @param IntoKeyword          $component the component to be built
-     * @param array<string, mixed> $options   parameters for building
+     * @param IntoKeyword $component the component to be built
+     * @param array       $options   parameters for building
      *
      * @return string
      */

@@ -1,4 +1,7 @@
 <?php
+/**
+ * Parses a data type.
+ */
 
 declare(strict_types=1);
 
@@ -24,8 +27,7 @@ class DataType extends Component
     /**
      * All data type options.
      *
-     * @var array<string, int|array<int, int|string>>
-     * @psalm-var array<string, (positive-int|array{positive-int, ('var'|'var='|'expr'|'expr=')})>
+     * @var array
      */
     public static $DATA_TYPE_OPTIONS = [
         'BINARY' => 1,
@@ -63,7 +65,7 @@ class DataType extends Component
      *
      * For more information, check the MySQL manual.
      *
-     * @var int[]|string[]
+     * @var array
      */
     public $parameters = [];
 
@@ -75,9 +77,9 @@ class DataType extends Component
     public $options;
 
     /**
-     * @param string         $name       the name of this data type
-     * @param int[]|string[] $parameters the parameters (size or possible values)
-     * @param OptionsArray   $options    the options of this data type
+     * @param string       $name       the name of this data type
+     * @param array        $parameters the parameters (size or possible values)
+     * @param OptionsArray $options    the options of this data type
      */
     public function __construct(
         $name = null,
@@ -90,9 +92,9 @@ class DataType extends Component
     }
 
     /**
-     * @param Parser               $parser  the parser that serves as context
-     * @param TokensList           $list    the list of tokens that are being parsed
-     * @param array<string, mixed> $options parameters for parsing
+     * @param Parser     $parser  the parser that serves as context
+     * @param TokensList $list    the list of tokens that are being parsed
+     * @param array      $options parameters for parsing
      *
      * @return DataType|null
      */
@@ -116,6 +118,8 @@ class DataType extends Component
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
+             *
+             * @var Token
              */
             $token = $list->tokens[$list->idx];
 
@@ -155,8 +159,8 @@ class DataType extends Component
     }
 
     /**
-     * @param DataType             $component the component to be built
-     * @param array<string, mixed> $options   parameters for building
+     * @param DataType $component the component to be built
+     * @param array    $options   parameters for building
      *
      * @return string
      */

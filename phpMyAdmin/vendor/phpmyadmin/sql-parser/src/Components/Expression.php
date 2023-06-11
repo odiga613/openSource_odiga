@@ -1,4 +1,8 @@
 <?php
+/**
+ * Parses a reference to an expression (column, table or database name, function
+ * call, mathematical expression, etc.).
+ */
 
 declare(strict_types=1);
 
@@ -13,7 +17,6 @@ use PhpMyAdmin\SqlParser\TokensList;
 
 use function implode;
 use function is_array;
-use function rtrim;
 use function strlen;
 use function trim;
 
@@ -23,65 +26,61 @@ use function trim;
  *
  * @final
  */
-#[\AllowDynamicProperties]
 class Expression extends Component
 {
     /**
      * List of allowed reserved keywords in expressions.
      *
-     * @var array<string, int>
+     * @var array
      */
     private static $ALLOWED_KEYWORDS = [
-        'AND' => 1,
         'AS' => 1,
-        'BETWEEN' => 1,
-        'CASE' => 1,
         'DUAL' => 1,
-        'DIV' => 1,
-        'IS' => 1,
-        'MOD' => 1,
-        'NOT' => 1,
-        'NOT NULL' => 1,
         'NULL' => 1,
-        'OR' => 1,
-        'OVER' => 1,
         'REGEXP' => 1,
-        'RLIKE' => 1,
+        'CASE' => 1,
+        'DIV' => 1,
+        'AND' => 1,
+        'OR' => 1,
         'XOR' => 1,
+        'NOT' => 1,
+        'MOD' => 1,
+
+        'OVER' => 2,
     ];
 
     /**
      * The name of this database.
      *
-     * @var string|null
+     * @var string
      */
     public $database;
 
     /**
      * The name of this table.
      *
-     * @var string|null
+     * @var string
      */
     public $table;
 
     /**
      * The name of the column.
      *
-     * @var string|null
+     * @var string
      */
     public $column;
 
     /**
      * The sub-expression.
      *
-     * @var string|null
+     * @var string
      */
     public $expr = '';
 
     /**
      * The alias of this expression.
      *
-     * @var string|null
+     * @var string
      */
     public $alias;
 
@@ -95,7 +94,7 @@ class Expression extends Component
     /**
      * The type of subquery.
      *
-     * @var string|null
+     * @var string
      */
     public $subquery;
 
@@ -109,10 +108,12 @@ class Expression extends Component
      * If the database, table or column name is not required, pass an empty
      * string.
      *
-     * @param string|null $database The name of the database or the expression.
-     * @param string|null $table    The name of the table or the alias of the expression.
-     * @param string|null $column   the name of the column
-     * @param string|null $alias    the name of the alias
+     * @param string $database The name of the database or the the expression.
+     *                         the the expression.
+     * @param string $table    The name of the table or the alias of the expression.
+     *                         the alias of the expression.
+     * @param string $column   the name of the column
+     * @param string $alias    the name of the alias
      */
     public function __construct($database = null, $table = null, $column = null, $alias = null)
     {
@@ -153,9 +154,9 @@ class Expression extends Component
      *
      *          If not empty, breaks after last parentheses occurred.
      *
-     * @param Parser               $parser  the parser that serves as context
-     * @param TokensList           $list    the list of tokens that are being parsed
-     * @param array<string, mixed> $options parameters for parsing
+     * @param Parser     $parser  the parser that serves as context
+     * @param TokensList $list    the list of tokens that are being parsed
+     * @param array      $options parameters for parsing
      *
      * @return Expression|null
      *
@@ -212,6 +213,8 @@ class Expression extends Component
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
+             *
+             * @var Token
              */
             $token = $list->tokens[$list->idx];
 
@@ -375,23 +378,6 @@ class Expression extends Component
 
                     $ret->alias = $prev[1]->value;
                 } else {
-                    $currIdx = $list->idx;
-                    --$list->idx;
-                    $beforeToken = $list->getPrevious();
-                    $list->idx = $currIdx;
-                    // columns names tokens are of type NONE, or SYMBOL (`col`), and the columns options
-                    // would start with a token of type KEYWORD, in that case, we want to have a space
-                    // between the tokens.
-                    if (
-                        $ret->expr !== null &&
-                        $beforeToken &&
-                        ($beforeToken->type === Token::TYPE_NONE ||
-                        $beforeToken->type === Token::TYPE_SYMBOL || $beforeToken->type === Token::TYPE_STRING) &&
-                        $token->type === Token::TYPE_KEYWORD
-                    ) {
-                        $ret->expr = rtrim($ret->expr, ' ') . ' ';
-                    }
-
                     $ret->expr .= $token->token;
                 }
             } elseif (! $isExpr) {
@@ -449,7 +435,7 @@ class Expression extends Component
 
     /**
      * @param Expression|Expression[] $component the component to be built
-     * @param array<string, mixed>    $options   parameters for building
+     * @param array                   $options   parameters for building
      *
      * @return string
      */

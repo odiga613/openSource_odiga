@@ -266,8 +266,10 @@ class Monitor
      *
      * @param int $start Unix Time: Start time for query
      * @param int $end   Unix Time: End time for query
+     *
+     * @return array
      */
-    public function getJsonForLogDataTypeSlow(int $start, int $end): ?array
+    public function getJsonForLogDataTypeSlow(int $start, int $end): array
     {
         $query = 'SELECT start_time, user_host, ';
         $query .= 'Sec_to_Time(Sum(Time_to_Sec(query_time))) as query_time, ';
@@ -277,13 +279,10 @@ class Monitor
         $query .= 'COUNT(sql_text) AS \'#\' ';
         $query .= 'FROM `mysql`.`slow_log` ';
         $query .= 'WHERE start_time > FROM_UNIXTIME(' . $start . ') ';
-        // See: mode = ONLY_FULL_GROUP_BY
-        $query .= 'AND start_time < FROM_UNIXTIME(' . $end . ') GROUP BY start_time, user_host, db, sql_text';
+        $query .= 'AND start_time < FROM_UNIXTIME(' . $end . ') GROUP BY sql_text';
 
         $result = $this->dbi->tryQuery($query);
-        if ($result === false) {
-            return null;
-        }
+        // TODO: check for false
 
         $return = [
             'rows' => [],
@@ -336,19 +335,21 @@ class Monitor
     }
 
     /**
-     * Returns JSON for log data with type: general
+     * Returns JSon for log data with type: general
      *
      * @param int  $start           Unix Time: Start time for query
      * @param int  $end             Unix Time: End time for query
      * @param bool $isTypesLimited  Whether to limit types or not
      * @param bool $removeVariables Whether to remove variables or not
+     *
+     * @return array
      */
     public function getJsonForLogDataTypeGeneral(
         int $start,
         int $end,
         bool $isTypesLimited,
         bool $removeVariables
-    ): ?array {
+    ): array {
         $limitTypes = '';
         if ($isTypesLimited) {
             $limitTypes = 'AND argument REGEXP \'^(INSERT|SELECT|UPDATE|DELETE)\' ';
@@ -360,13 +361,10 @@ class Monitor
         $query .= 'WHERE command_type=\'Query\' ';
         $query .= 'AND event_time > FROM_UNIXTIME(' . $start . ') ';
         $query .= 'AND event_time < FROM_UNIXTIME(' . $end . ') ';
-        // See: mode = ONLY_FULL_GROUP_BY
-        $query .= $limitTypes . 'GROUP by event_time, user_host, thread_id, server_id, argument'; // HAVING count > 1';
+        $query .= $limitTypes . 'GROUP by argument'; // HAVING count > 1';
 
         $result = $this->dbi->tryQuery($query);
-        if ($result === false) {
-            return null;
-        }
+        // TODO: check for false
 
         $return = [
             'rows' => [],
@@ -387,7 +385,7 @@ class Monitor
             $return['sum'][$type] += $row['#'];
 
             switch ($type) {
-                /** @noinspection PhpMissingBreakStatementInspection */
+            /** @noinspection PhpMissingBreakStatementInspection */
                 case 'insert':
                     // Group inserts if selected
                     if (
@@ -397,10 +395,6 @@ class Monitor
                             $matches
                         )
                     ) {
-                        if (! isset($insertTables[$matches[2]])) {
-                            $insertTables[$matches[2]] = 0;
-                        }
-
                         $insertTables[$matches[2]]++;
                         if ($insertTables[$matches[2]] > 1) {
                             $return['rows'][$insertTablesFirst]['#'] = $insertTables[$matches[2]];

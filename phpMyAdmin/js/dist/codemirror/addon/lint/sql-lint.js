@@ -4,8 +4,10 @@ CodeMirror.sqlLint = function (text, updateLinting, options, cm) {
     updateLinting(cm, []);
     return;
   }
+
   function handleResponse(response) {
     var found = [];
+
     for (var idx in response) {
       found.push({
         // eslint-disable-next-line new-cap
@@ -16,8 +18,10 @@ CodeMirror.sqlLint = function (text, updateLinting, options, cm) {
         severity: response[idx].severity
       });
     }
+
     updateLinting(cm, found);
   }
+
   $.ajax({
     method: 'POST',
     url: 'index.php?route=/lint',

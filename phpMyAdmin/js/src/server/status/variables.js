@@ -43,7 +43,7 @@ AJAX.registerOnload('server/status/variables.js', function () {
 
     $('#filterText').on('keyup', function () {
         var word = $(this).val().replace(/_/g, ' ');
-        if (word.length === 0 || word.length >= 32768) {
+        if (word.length === 0) {
             textFilter = null;
         } else {
             try {

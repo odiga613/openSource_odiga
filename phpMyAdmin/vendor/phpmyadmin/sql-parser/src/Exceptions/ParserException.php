@@ -1,4 +1,7 @@
 <?php
+/**
+ * Exception thrown by the parser.
+ */
 
 declare(strict_types=1);
 

@@ -1,4 +1,7 @@
 <?php
+/**
+ * `REFERENCES` keyword parser.
+ */
 
 declare(strict_types=1);
 
@@ -23,8 +26,7 @@ class Reference extends Component
     /**
      * All references options.
      *
-     * @var array<string, int|array<int, int|string>>
-     * @psalm-var array<string, (positive-int|array{positive-int, ('var'|'var='|'expr'|'expr=')})>
+     * @var array
      */
     public static $REFERENCES_OPTIONS = [
         'MATCH' => [
@@ -51,7 +53,7 @@ class Reference extends Component
     /**
      * The referenced columns.
      *
-     * @var string[]
+     * @var array
      */
     public $columns;
 
@@ -64,7 +66,7 @@ class Reference extends Component
 
     /**
      * @param Expression   $table   the name of the table referenced
-     * @param string[]     $columns the columns referenced
+     * @param array        $columns the columns referenced
      * @param OptionsArray $options the options
      */
     public function __construct($table = null, array $columns = [], $options = null)
@@ -75,9 +77,9 @@ class Reference extends Component
     }
 
     /**
-     * @param Parser               $parser  the parser that serves as context
-     * @param TokensList           $list    the list of tokens that are being parsed
-     * @param array<string, mixed> $options parameters for parsing
+     * @param Parser     $parser  the parser that serves as context
+     * @param TokensList $list    the list of tokens that are being parsed
+     * @param array      $options parameters for parsing
      *
      * @return Reference
      */
@@ -103,6 +105,8 @@ class Reference extends Component
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
+             *
+             * @var Token
              */
             $token = $list->tokens[$list->idx];
 
@@ -142,8 +146,8 @@ class Reference extends Component
     }
 
     /**
-     * @param Reference            $component the component to be built
-     * @param array<string, mixed> $options   parameters for building
+     * @param Reference $component the component to be built
+     * @param array     $options   parameters for building
      *
      * @return string
      */

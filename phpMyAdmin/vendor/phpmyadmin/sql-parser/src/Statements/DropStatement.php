@@ -1,4 +1,7 @@
 <?php
+/**
+ * `DROP` statement.
+ */
 
 declare(strict_types=1);
 
@@ -15,8 +18,7 @@ class DropStatement extends Statement
     /**
      * Options of this statement.
      *
-     * @var array<string, int|array<int, int|string>>
-     * @psalm-var array<string, (positive-int|array{positive-int, ('var'|'var='|'expr'|'expr=')})>
+     * @var array
      */
     public static $OPTIONS = [
         'DATABASE' => 1,
@@ -42,8 +44,7 @@ class DropStatement extends Statement
      *
      * @see Statement::$CLAUSES
      *
-     * @var array<string, array<int, int|string>>
-     * @psalm-var array<string, array{non-empty-string, (1|2|3)}>
+     * @var array
      */
     public static $CLAUSES = [
         'DROP' => [
@@ -69,14 +70,14 @@ class DropStatement extends Statement
     /**
      * Dropped elements.
      *
-     * @var Expression[]|null
+     * @var Expression[]
      */
     public $fields;
 
     /**
      * Table of the dropped index.
      *
-     * @var Expression|null
+     * @var Expression
      */
     public $table;
 }

@@ -13,8 +13,6 @@ use PhpMyAdmin\Server\Privileges;
 use PhpMyAdmin\Template;
 use PhpMyAdmin\Util;
 
-use function mb_strtolower;
-
 /**
  * Controller for database privileges
  */
@@ -39,8 +37,7 @@ class PrivilegesController extends AbstractController
     }
 
     /**
-     * @param string[] $params Request parameters
-     * @psalm-param array{checkprivsdb: string} $params
+     * @param array $params Request parameters
      */
     public function __invoke(array $params): string
     {
@@ -48,19 +45,14 @@ class PrivilegesController extends AbstractController
 
         $scriptName = Util::getScriptNameForOption($cfg['DefaultTabDatabase'], 'database');
 
-        $db = $params['checkprivsdb'];
-        if ($this->dbi->getLowerCaseNames() === '1') {
-            $db = mb_strtolower($params['checkprivsdb']);
-        }
-
         $privileges = [];
         if ($this->dbi->isSuperUser()) {
-            $privileges = $this->privileges->getAllPrivileges($db);
+            $privileges = $this->privileges->getAllPrivileges($params['checkprivsdb']);
         }
 
         return $this->template->render('database/privileges/index', [
             'is_superuser' => $this->dbi->isSuperUser(),
-            'db' => $db,
+            'db' => $params['checkprivsdb'],
             'database_url' => $scriptName,
             'text_dir' => $text_dir,
             'is_createuser' => $this->dbi->isCreateUser(),

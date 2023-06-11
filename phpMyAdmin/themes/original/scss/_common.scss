@@ -48,10 +48,6 @@ form {
   display: inline;
 }
 
-input[type=checkbox]#fk_checks {
-  margin: 6px;
-}
-
 textarea {
   overflow: visible;
 }
@@ -427,6 +423,7 @@ div#modalOverlay {
 }
 
 #login_form label {
+  width: 10em;
   font-weight: bolder;
 }
 
@@ -1014,6 +1011,10 @@ select.invalid_value,
   vertical-align: middle;
 }
 
+#tablestructure tbody label {
+  margin: 0.3rem 0;
+}
+
 #structure-action-links a {
   margin-right: 1em;
 }
@@ -1595,7 +1596,6 @@ input#auto_increment_opt {
 
   .lDiv div {
     padding: 0.2em 0.5em 0.2em 0.2em;
-    white-space: nowrap;
 
     &:hover {
       background: #ddd;
@@ -1778,32 +1778,9 @@ input#auto_increment_opt {
   }
 }
 
-input.btn,
-button.btn {
-  border-color: $btn-border-color;
+input.btn {
   color: #333;
   background-color: #d0dce0;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: #8b9aa0;
-    border-color: $btn-border-color;
-  }
-}
-
-button.jsPrintButton {
-  background-color: unset;
-  border-color: unset;
-  border: unset;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: unset;
-    border-color: unset;
-    border: unset;
-  }
 }
 
 body .ui-widget {
@@ -2731,8 +2708,4 @@ body {
 
 .resize-vertical {
   resize: vertical;
-}
-
-.table-responsive-md .data {
-  z-index: 9;
 }

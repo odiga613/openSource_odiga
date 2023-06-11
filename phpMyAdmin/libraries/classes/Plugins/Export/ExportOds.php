@@ -283,7 +283,10 @@ class ExportOds extends ExportPlugin
                         . '</text:p>'
                         . '</table:table-cell>';
                 } elseif (
-                    $fieldsMeta[$j]->isNumeric
+                    ($fieldsMeta[$j]->isNumeric
+                    && ! $fieldsMeta[$j]->isMappedTypeTimestamp
+                    && ! $fieldsMeta[$j]->isBlob)
+                    || $fieldsMeta[$j]->isType(FieldMetadata::TYPE_REAL)
                 ) {
                     $GLOBALS['ods_buffer'] .= '<table:table-cell office:value-type="float"'
                         . ' office:value="' . $row[$j] . '" >'
@@ -311,19 +314,12 @@ class ExportOds extends ExportPlugin
     /**
      * Outputs result raw query in ODS format
      *
-     * @param string      $errorUrl the url to go back in case of error
-     * @param string|null $db       the database where the query is executed
-     * @param string      $sqlQuery the rawquery to output
-     * @param string      $crlf     the end of line sequence
+     * @param string $errorUrl the url to go back in case of error
+     * @param string $sqlQuery the rawquery to output
+     * @param string $crlf     the end of line sequence
      */
-    public function exportRawQuery(string $errorUrl, ?string $db, string $sqlQuery, string $crlf): bool
+    public function exportRawQuery(string $errorUrl, string $sqlQuery, string $crlf): bool
     {
-        global $dbi;
-
-        if ($db !== null) {
-            $dbi->selectDb($db);
-        }
-
-        return $this->exportData($db ?? '', '', $crlf, $errorUrl, $sqlQuery);
+        return $this->exportData('', '', $crlf, $errorUrl, $sqlQuery);
     }
 }

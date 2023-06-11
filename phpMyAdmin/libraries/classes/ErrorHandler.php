@@ -12,7 +12,6 @@ use function array_splice;
 use function count;
 use function defined;
 use function error_reporting;
-use function get_class;
 use function headers_sent;
 use function htmlspecialchars;
 use function set_error_handler;
@@ -230,17 +229,18 @@ class ErrorHandler
 
     /**
      * Hides exception if it's not in the development environment.
+     *
+     * @throws Throwable
      */
     public function handleException(Throwable $exception): void
     {
         $config = $GLOBALS['config'] ?? null;
-        $this->hideLocation = ! $config instanceof Config || $config->get('environment') !== 'development';
-        $this->addError(
-            get_class($exception) . ': ' . $exception->getMessage(),
-            (int) $exception->getCode(),
-            $exception->getFile(),
-            $exception->getLine()
-        );
+        $environment = $config instanceof Config ? $config->get('environment') : 'production';
+        if ($environment !== 'development') {
+            return;
+        }
+
+        throw $exception;
     }
 
     /**
@@ -275,11 +275,8 @@ class ErrorHandler
         $error = new Error($errno, $errstr, $errfile, $errline);
         $error->setHideLocation($this->hideLocation);
 
-        // Deprecation errors will be shown in development environment, as they will have a different number.
-        if ($error->getNumber() !== E_DEPRECATED) {
-            // do not repeat errors
-            $this->errors[$error->getHash()] = $error;
-        }
+        // do not repeat errors
+        $this->errors[$error->getHash()] = $error;
 
         switch ($error->getNumber()) {
             case E_STRICT:
@@ -306,9 +303,7 @@ class ErrorHandler
             default:
                 // FATAL error, display it and exit
                 $this->dispFatalError($error);
-                if (! defined('TESTSUITE')) {
-                    exit;
-                }
+                exit;
         }
     }
 
@@ -339,9 +334,7 @@ class ErrorHandler
 
         echo $error->getDisplay();
         $this->dispPageEnd();
-        if (! defined('TESTSUITE')) {
-            exit;
-        }
+        exit;
     }
 
     /**

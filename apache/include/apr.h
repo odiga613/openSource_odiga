@@ -367,7 +367,7 @@ extern "C" {
 /* If we have a TCP implementation that can be "corked", what flag
  * do we use?
  */
-#define APR_TCP_NOPUSH_FLAG       0
+#define APR_TCP_NOPUSH_FLAG       @apr_tcp_nopush_flag@
 
 /* Is the TCP_NODELAY socket option inherited from listening sockets?
  */

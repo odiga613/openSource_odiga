@@ -1,4 +1,7 @@
 <?php
+/**
+ * Parses an Index hint.
+ */
 
 declare(strict_types=1);
 
@@ -43,15 +46,15 @@ class IndexHint extends Component
     /**
      * List of indexes in this hint
      *
-     * @var Expression[]
+     * @var array
      */
     public $indexes = [];
 
     /**
-     * @param string       $type       the type of hint (USE/FORCE/IGNORE)
-     * @param string       $indexOrKey What the hint is for (INDEX/KEY)
-     * @param string       $for        the clause for which this hint is (JOIN/ORDER BY/GROUP BY)
-     * @param Expression[] $indexes    List of indexes in this hint
+     * @param string $type       the type of hint (USE/FORCE/IGNORE)
+     * @param string $indexOrKey What the hint is for (INDEX/KEY)
+     * @param string $for        the clause for which this hint is (JOIN/ORDER BY/GROUP BY)
+     * @param array  $indexes    List of indexes in this hint
      */
     public function __construct(
         ?string $type = null,
@@ -66,9 +69,9 @@ class IndexHint extends Component
     }
 
     /**
-     * @param Parser               $parser  the parser that serves as context
-     * @param TokensList           $list    the list of tokens that are being parsed
-     * @param array<string, mixed> $options parameters for parsing
+     * @param Parser     $parser  the parser that serves as context
+     * @param TokensList $list    the list of tokens that are being parsed
+     * @param array      $options parameters for parsing
      *
      * @return IndexHint|Component[]
      */
@@ -101,6 +104,8 @@ class IndexHint extends Component
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
+             *
+             * @var Token
              */
             $token = $list->tokens[$list->idx];
 
@@ -187,7 +192,7 @@ class IndexHint extends Component
 
     /**
      * @param IndexHint|IndexHint[] $component the component to be built
-     * @param array<string, mixed>  $options   parameters for building
+     * @param array                 $options   parameters for building
      *
      * @return string
      */

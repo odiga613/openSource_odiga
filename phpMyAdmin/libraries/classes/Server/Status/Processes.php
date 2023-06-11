@@ -28,7 +28,7 @@ final class Processes
     /**
      * @param array $params Request parameters
      *
-     * @return array<string, array|string|bool>
+     * @return array<string, array|string>
      */
     public function getList(array $params): array
     {
@@ -70,21 +70,26 @@ final class Processes
         while ($process = $result->fetchAssoc()) {
             // Array keys need to modify due to the way it has used
             // to display column values
-            foreach (array_keys($process) as $key) {
-                $newKey = ucfirst(mb_strtolower($key));
-                if ($newKey === $key) {
-                    continue;
-                }
+            if (
+                (! empty($params['order_by_field']) && ! empty($params['sort_order']))
+                || ! empty($params['showExecuting'])
+            ) {
+                foreach (array_keys($process) as $key) {
+                    $newKey = ucfirst(mb_strtolower($key));
+                    if ($newKey === $key) {
+                        continue;
+                    }
 
-                $process[$newKey] = $process[$key];
-                unset($process[$key]);
+                    $process[$newKey] = $process[$key];
+                    unset($process[$key]);
+                }
             }
 
             $rows[] = [
                 'id' => $process['Id'],
                 'user' => $process['User'],
                 'host' => $process['Host'],
-                'db' => ! isset($process['Db']) || strlen($process['Db']) === 0 ? '' : $process['Db'],
+                'db' => ! isset($process['db']) || strlen($process['db']) === 0 ? '' : $process['db'],
                 'command' => $process['Command'],
                 'time' => $process['Time'],
                 'state' => ! empty($process['State']) ? $process['State'] : '---',
@@ -97,7 +102,6 @@ final class Processes
             'columns' => $this->getSortableColumnsForProcessList($showFullSql, $params),
             'rows' => $rows,
             'refresh_params' => $urlParams,
-            'is_mariadb' => $this->dbi->isMariaDB(),
         ];
     }
 
@@ -120,7 +124,7 @@ final class Processes
             ],
             [
                 'column_name' => __('Database'),
-                'order_by_field' => 'Db',
+                'order_by_field' => 'db',
             ],
             [
                 'column_name' => __('Command'),
@@ -134,18 +138,14 @@ final class Processes
                 'column_name' => __('Status'),
                 'order_by_field' => 'State',
             ],
-        ];
-
-        if ($this->dbi->isMariaDB()) {
-            $sortableColumns[] = [
+            [
                 'column_name' => __('Progress'),
                 'order_by_field' => 'Progress',
-            ];
-        }
-
-        $sortableColumns[] = [
-            'column_name' => __('SQL query'),
-            'order_by_field' => 'Info',
+            ],
+            [
+                'column_name' => __('SQL query'),
+                'order_by_field' => 'Info',
+            ],
         ];
 
         $sortableColCount = count($sortableColumns);

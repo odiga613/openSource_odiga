@@ -130,7 +130,6 @@ class WindowsNt extends Base
         $buffer = $this->getWMI('Win32_PageFileUsage');
 
         $mem['SwapTotal'] = 0;
-        $mem['SwapFree'] = 0;
         $mem['SwapUsed'] = 0;
         $mem['SwapPeak'] = 0;
 
@@ -139,8 +138,6 @@ class WindowsNt extends Base
             $mem['SwapUsed'] += $swapdevice['CurrentUsage'] * 1024;
             $mem['SwapPeak'] += $swapdevice['PeakUsage'] * 1024;
         }
-
-        $mem['SwapFree'] = $mem['SwapTotal'] - $mem['SwapUsed'];
 
         return $mem;
     }

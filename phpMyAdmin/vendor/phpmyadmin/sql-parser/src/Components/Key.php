@@ -1,4 +1,7 @@
 <?php
+/**
+ * Parses the definition of a key.
+ */
 
 declare(strict_types=1);
 
@@ -25,8 +28,7 @@ class Key extends Component
     /**
      * All key options.
      *
-     * @var array<string, int|array<int, int|string>>
-     * @psalm-var array<string, (positive-int|array{positive-int, ('var'|'var='|'expr'|'expr=')})>
+     * @var array
      */
     public static $KEY_OPTIONS = [
         'KEY_BLOCK_SIZE' => [
@@ -76,7 +78,7 @@ class Key extends Component
     /**
      * The key columns
      *
-     * @var array<int, array<string, int|string>>
+     * @var array[]
      * @phpstan-var array{name?: string, length?: int, order?: string}[]
      */
     public $columns;
@@ -103,11 +105,10 @@ class Key extends Component
     public $options;
 
     /**
-     * @param string                                $name    the name of the key
-     * @param array<int, array<string, int|string>> $columns the columns covered by this key
-     * @param string                                $type    the type of this key
-     * @param OptionsArray                          $options the options of this key
-     * @phpstan-param array{name?: string, length?: int, order?: string}[] $columns
+     * @param string       $name    the name of the key
+     * @param array        $columns the columns covered by this key
+     * @param string       $type    the type of this key
+     * @param OptionsArray $options the options of this key
      */
     public function __construct(
         $name = null,
@@ -122,9 +123,9 @@ class Key extends Component
     }
 
     /**
-     * @param Parser               $parser  the parser that serves as context
-     * @param TokensList           $list    the list of tokens that are being parsed
-     * @param array<string, mixed> $options parameters for parsing
+     * @param Parser     $parser  the parser that serves as context
+     * @param TokensList $list    the list of tokens that are being parsed
+     * @param array      $options parameters for parsing
      *
      * @return Key
      */
@@ -162,6 +163,8 @@ class Key extends Component
         for (; $list->idx < $list->count; ++$list->idx) {
             /**
              * Token parsed at this moment.
+             *
+             * @var Token
              */
             $token = $list->tokens[$list->idx];
 
@@ -266,8 +269,8 @@ class Key extends Component
     }
 
     /**
-     * @param Key                  $component the component to be built
-     * @param array<string, mixed> $options   parameters for building
+     * @param Key   $component the component to be built
+     * @param array $options   parameters for building
      *
      * @return string
      */

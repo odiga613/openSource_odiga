@@ -23,7 +23,6 @@ class Property
     private $name;
     private $originalName;
     private $array = false;
-    private $scalarsAllowed = false;
     private $type = null;
     private $content;
 
@@ -47,11 +46,6 @@ class Property
     {
         $this->array = false;
         $this->type = $type;
-
-        if ('|scalar' === substr($type, -7)) {
-            $this->scalarsAllowed = true;
-            $this->type = $type = substr($type, 0, -7);
-        }
 
         if ('[]' === substr($type, -2)) {
             $this->array = true;
@@ -77,10 +71,5 @@ class Property
     public function isArray(): bool
     {
         return $this->array;
-    }
-
-    public function areScalarsAllowed(): bool
-    {
-        return $this->scalarsAllowed;
     }
 }

@@ -1,4 +1,7 @@
 <?php
+/**
+ * Maintenance statement.
+ */
 
 declare(strict_types=1);
 
@@ -22,7 +25,7 @@ class MaintenanceStatement extends Statement
     /**
      * Tables maintained.
      *
-     * @var Expression[]|null
+     * @var Expression[]
      */
     public $tables;
 
@@ -34,8 +37,6 @@ class MaintenanceStatement extends Statement
      * @param Parser     $parser the instance that requests parsing
      * @param TokensList $list   the list of tokens to be parsed
      * @param Token      $token  the token that is being parsed
-     *
-     * @return void
      */
     public function after(Parser $parser, TokensList $list, Token $token)
     {

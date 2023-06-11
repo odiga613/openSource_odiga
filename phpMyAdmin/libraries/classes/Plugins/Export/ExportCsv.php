@@ -105,6 +105,10 @@ class ExportCsv extends ExportPlugin
     public function exportHeader(): bool
     {
         global $what, $csv_terminated, $csv_separator, $csv_enclosed, $csv_escaped;
+        //Enable columns names by default for CSV
+        if ($what === 'csv') {
+            $GLOBALS['csv_columns'] = 'yes';
+        }
 
         // Here we just prepare some values for export
         if ($what === 'excel') {
@@ -125,7 +129,7 @@ class ExportCsv extends ExportPlugin
             $csv_enclosed = '"';
             $csv_escaped = '"';
             if (isset($GLOBALS['excel_columns'])) {
-                $GLOBALS['csv_columns'] = true;
+                $GLOBALS['csv_columns'] = 'yes';
             }
         } else {
             if (empty($csv_terminated) || mb_strtolower($csv_terminated) === 'auto') {
@@ -222,7 +226,7 @@ class ExportCsv extends ExportPlugin
         $fields_cnt = $result->numFields();
 
         // If required, get fields name at the first line
-        if (isset($GLOBALS['csv_columns']) && $GLOBALS['csv_columns']) {
+        if (isset($GLOBALS['csv_columns'])) {
             $schema_insert = '';
             foreach ($result->getFieldNames() as $col_as) {
                 if (! empty($aliases[$db]['tables'][$table]['columns'][$col_as])) {
@@ -316,19 +320,12 @@ class ExportCsv extends ExportPlugin
     /**
      * Outputs result of raw query in CSV format
      *
-     * @param string      $errorUrl the url to go back in case of error
-     * @param string|null $db       the database where the query is executed
-     * @param string      $sqlQuery the rawquery to output
-     * @param string      $crlf     the end of line sequence
+     * @param string $errorUrl the url to go back in case of error
+     * @param string $sqlQuery the rawquery to output
+     * @param string $crlf     the end of line sequence
      */
-    public function exportRawQuery(string $errorUrl, ?string $db, string $sqlQuery, string $crlf): bool
+    public function exportRawQuery(string $errorUrl, string $sqlQuery, string $crlf): bool
     {
-        global $dbi;
-
-        if ($db !== null) {
-            $dbi->selectDb($db);
-        }
-
-        return $this->exportData($db ?? '', '', $crlf, $errorUrl, $sqlQuery);
+        return $this->exportData('', '', $crlf, $errorUrl, $sqlQuery);
     }
 }

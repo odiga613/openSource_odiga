@@ -42,6 +42,7 @@ use function preg_match;
 use function preg_replace;
 use function session_write_close;
 use function sprintf;
+use function str_contains;
 use function str_replace;
 use function strlen;
 use function strpos;
@@ -161,7 +162,7 @@ class Core
         /* List of PHP documentation translations */
         $php_doc_languages = [
             'pt_BR',
-            'zh_CN',
+            'zh',
             'fr',
             'de',
             'ja',
@@ -172,11 +173,7 @@ class Core
 
         $lang = 'en';
         if (isset($GLOBALS['lang']) && in_array($GLOBALS['lang'], $php_doc_languages)) {
-            if ($GLOBALS['lang'] === 'zh_CN') {
-                $lang = 'zh';
-            } else {
-                $lang = $GLOBALS['lang'];
-            }
+            $lang = $GLOBALS['lang'];
         }
 
         return self::linkURL('https://www.php.net/manual/' . $lang . '/' . $target);
@@ -487,10 +484,24 @@ class Core
 
         $headers['Content-Type'] = $mimetype;
 
-        // The default output in PMA uses gzip,
-        // so if we want to output uncompressed file, we should reset the encoding.
-        // See PHP bug https://github.com/php/php-src/issues/8218
-        header_remove('Content-Encoding');
+        /** @var string $browserAgent */
+        $browserAgent = $GLOBALS['config']->get('PMA_USR_BROWSER_AGENT');
+
+        // inform the server that compression has been done,
+        // to avoid a double compression (for example with Apache + mod_deflate)
+        if (str_contains($mimetype, 'gzip')) {
+            /**
+             * @see https://github.com/phpmyadmin/phpmyadmin/issues/11283
+             */
+            if ($browserAgent !== 'CHROME') {
+                $headers['Content-Encoding'] = 'gzip';
+            }
+        } else {
+            // The default output in PMA uses gzip,
+            // so if we want to output uncompressed file, we should reset the encoding.
+            // See PHP bug https://github.com/php/php-src/issues/8218
+            header_remove('Content-Encoding');
+        }
 
         $headers['Content-Transfer-Encoding'] = 'binary';
 

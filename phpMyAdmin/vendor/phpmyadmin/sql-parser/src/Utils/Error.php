@@ -1,4 +1,7 @@
 <?php
+/**
+ * Error related utilities.
+ */
 
 declare(strict_types=1);
 
@@ -20,9 +23,9 @@ class Error
     /**
      * Gets the errors of a lexer and a parser.
      *
-     * @param array<int|string, Lexer|Parser> $objs objects from where the errors will be extracted
+     * @param array $objs objects from where the errors will be extracted
      *
-     * @return array<int, array<int, int|string|null>> Each element of the array represents an error.
+     * @return array Each element of the array represents an error.
      *               `$err[0]` holds the error message.
      *               `$err[1]` holds the error code.
      *               `$err[2]` holds the string that caused the issue.
@@ -63,8 +66,8 @@ class Error
     /**
      * Formats the specified errors.
      *
-     * @param array<int, array<int, int|string|null>> $errors the errors to be formatted
-     * @param string                                  $format The format of an error.
+     * @param array  $errors the errors to be formatted
+     * @param string $format The format of an error.
      *                       '$1$d' is replaced by the position of this error.
      *                       '$2$s' is replaced by the error message.
      *                       '$3$d' is replaced by the error code.
@@ -72,7 +75,7 @@ class Error
      *                       issue.
      *                       '$5$d' is replaced by the position of the string.
      *
-     * @return string[]
+     * @return array
      */
     public static function format(
         $errors,

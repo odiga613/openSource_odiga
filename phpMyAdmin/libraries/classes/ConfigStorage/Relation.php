@@ -59,8 +59,7 @@ class Relation
     /** @var DatabaseInterface */
     public $dbi;
 
-    /** @param DatabaseInterface $dbi */
-    public function __construct($dbi)
+    public function __construct(DatabaseInterface $dbi)
     {
         $this->dbi = $dbi;
     }
