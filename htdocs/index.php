@@ -6,10 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e1cafcb9eeed0c95c6f45f01a5755bb7"></script>
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
-	<script src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/leaflet.css?v=1.3.1" />
+    <script type="text/javascript" src="js/leaflet.js?v=1.3.1"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="dist/graphhopper-client.js?v=0.9.0-4"></script>
+    <script type="text/javascript" src="js/togeojson.js"></script>
+    <script type="text/javascript" src="js/script.js?v=5.1"></script>
 </head>
 <body>
-	<div id="map" style="width: 100%; height: 100vh;">
+	<div id="routing-map" style="cursor: default; height:80vh; width: 100%;"></div>
 		<section class="search_box">
 			<div class="search_wrap">
 				<div class="search">
@@ -46,7 +52,6 @@
 				</div>
 			</div>
 		</section>
-	</div>
 </body>
 <script type="text/javascript" src="./js/map.js"></script>
 </html>

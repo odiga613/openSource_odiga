@@ -11,10 +11,11 @@
 	font-family: 'Inter'; 
 }
 .search_box{
-	position: relative;
+	position: fixed;
 	width: 100%;
 	height: 90px;
 	z-index: 5;
+	top: 0;
 	display: flex;
 	justify-content: center;
 }
@@ -163,4 +164,7 @@
 	font-size: 18px;
 	background-color: #6D987E;
 	border-radius: 6px;
+}
+#routing-map{
+	z-index: 0;
 }
