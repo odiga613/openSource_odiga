@@ -75,3 +75,430 @@
 [Fri Jun 09 17:02:10.669334 2023] [ssl:warn] [pid 18400:tid 360] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Fri Jun 09 17:02:10.704304 2023] [ssl:warn] [pid 18400:tid 360] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Fri Jun 09 17:02:10.740081 2023] [mpm_winnt:notice] [pid 18400:tid 360] AH00354: Child: Starting 150 worker threads.
+[Fri Jun 09 21:31:26.132040 2023] [ssl:warn] [pid 28532:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 09 21:31:26.183533 2023] [core:warn] [pid 28532:tid 400] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Jun 09 21:31:26.186533 2023] [ssl:warn] [pid 28532:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 09 21:31:26.294113 2023] [mpm_winnt:notice] [pid 28532:tid 400] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Fri Jun 09 21:31:26.294113 2023] [mpm_winnt:notice] [pid 28532:tid 400] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Fri Jun 09 21:31:26.294113 2023] [core:notice] [pid 28532:tid 400] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Fri Jun 09 21:31:26.300537 2023] [mpm_winnt:notice] [pid 28532:tid 400] AH00418: Parent: Created child process 14924
+[Fri Jun 09 21:31:27.077594 2023] [ssl:warn] [pid 14924:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 09 21:31:27.120603 2023] [ssl:warn] [pid 14924:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 09 21:31:27.182618 2023] [mpm_winnt:notice] [pid 14924:tid 404] AH00354: Child: Starting 150 worker threads.
+[Fri Jun 09 22:22:50.863274 2023] [ssl:warn] [pid 14412:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 09 22:22:50.903284 2023] [core:warn] [pid 14412:tid 400] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Jun 09 22:22:50.905284 2023] [ssl:warn] [pid 14412:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 09 22:22:50.965298 2023] [mpm_winnt:notice] [pid 14412:tid 400] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Fri Jun 09 22:22:50.965298 2023] [mpm_winnt:notice] [pid 14412:tid 400] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Fri Jun 09 22:22:50.965298 2023] [core:notice] [pid 14412:tid 400] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Fri Jun 09 22:22:50.970299 2023] [mpm_winnt:notice] [pid 14412:tid 400] AH00418: Parent: Created child process 35384
+[Fri Jun 09 22:22:51.754476 2023] [ssl:warn] [pid 35384:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 09 22:22:51.798485 2023] [ssl:warn] [pid 35384:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 09 22:22:51.863500 2023] [mpm_winnt:notice] [pid 35384:tid 404] AH00354: Child: Starting 150 worker threads.
+[Fri Jun 09 23:04:29.929970 2023] [ssl:warn] [pid 30696:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 09 23:04:29.973980 2023] [core:warn] [pid 30696:tid 400] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Jun 09 23:04:29.975981 2023] [ssl:warn] [pid 30696:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 09 23:04:30.037995 2023] [mpm_winnt:notice] [pid 30696:tid 400] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Fri Jun 09 23:04:30.037995 2023] [mpm_winnt:notice] [pid 30696:tid 400] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Fri Jun 09 23:04:30.037995 2023] [core:notice] [pid 30696:tid 400] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Fri Jun 09 23:04:30.041997 2023] [mpm_winnt:notice] [pid 30696:tid 400] AH00418: Parent: Created child process 756
+[Fri Jun 09 23:04:30.821171 2023] [ssl:warn] [pid 756:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 09 23:04:30.865181 2023] [ssl:warn] [pid 756:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 09 23:04:30.928195 2023] [mpm_winnt:notice] [pid 756:tid 404] AH00354: Child: Starting 150 worker threads.
+[Sat Jun 10 00:09:05.608012 2023] [ssl:warn] [pid 21132:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 00:09:05.649021 2023] [core:warn] [pid 21132:tid 400] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Jun 10 00:09:05.652022 2023] [ssl:warn] [pid 21132:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 00:09:05.711035 2023] [mpm_winnt:notice] [pid 21132:tid 400] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Sat Jun 10 00:09:05.711035 2023] [mpm_winnt:notice] [pid 21132:tid 400] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Sat Jun 10 00:09:05.711035 2023] [core:notice] [pid 21132:tid 400] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Sat Jun 10 00:09:05.715036 2023] [mpm_winnt:notice] [pid 21132:tid 400] AH00418: Parent: Created child process 9844
+[Sat Jun 10 00:09:06.486793 2023] [ssl:warn] [pid 9844:tid 412] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 00:09:06.528802 2023] [ssl:warn] [pid 9844:tid 412] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 00:09:06.591817 2023] [mpm_winnt:notice] [pid 9844:tid 412] AH00354: Child: Starting 150 worker threads.
+[Sat Jun 10 00:15:55.739747 2023] [php:warn] [pid 9844:tid 1788] [client ::1:3071] PHP Warning:  Undefined variable $result2 in C:\\xampp\\htdocs\\index.php on line 51
+[Sat Jun 10 00:15:55.739747 2023] [php:error] [pid 9844:tid 1788] [client ::1:3071] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_array(): Argument #1 ($result) must be of type mysqli_result, null given in C:\\xampp\\htdocs\\index.php:51\nStack trace:\n#0 C:\\xampp\\htdocs\\index.php(51): mysqli_fetch_array(NULL)\n#1 {main}\n  thrown in C:\\xampp\\htdocs\\index.php on line 51
+[Sat Jun 10 00:15:56.648610 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3072] PHP Warning:  Undefined variable $result2 in C:\\xampp\\htdocs\\index.php on line 51
+[Sat Jun 10 00:15:56.648610 2023] [php:error] [pid 9844:tid 1772] [client ::1:3072] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_array(): Argument #1 ($result) must be of type mysqli_result, null given in C:\\xampp\\htdocs\\index.php:51\nStack trace:\n#0 C:\\xampp\\htdocs\\index.php(51): mysqli_fetch_array(NULL)\n#1 {main}\n  thrown in C:\\xampp\\htdocs\\index.php on line 51
+[Sat Jun 10 00:23:13.666424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.666424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.667423 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.667423 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.667423 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.667423 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.668424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.668424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.668424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.668424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.668424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.669424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.669424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.669424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.669424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.669424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.670424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.670424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.670424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.670424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.670424 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.671425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.671425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.671425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.671425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.671425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.672425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.672425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.672425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.672425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.672425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.672425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.673425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.673425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.673425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.673425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.673425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.674426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.674426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.674426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.674426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.674426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.675425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.675425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.675425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.675425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.675425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.675425 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.676426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.676426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.676426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.676426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.676426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.677426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.677426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.677426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.677426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.677426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.678426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.678426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.678426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.678426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.678426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.679426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.679426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.679426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.679426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.679426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.679426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.680426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.680426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.680426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.680426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.680426 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.681427 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.681427 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.681427 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.681427 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.682427 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.682427 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.682427 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.682427 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.683428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.683428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.683428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.683428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.683428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.684428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.684428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.684428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.684428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.685428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.685428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.685428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.685428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.685428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.686428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.686428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.686428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.686428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.686428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.687428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.687428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.687428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.687428 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.688430 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.688430 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.688430 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.689429 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.689429 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.689429 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.689429 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.690429 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.690429 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.690429 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.690429 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.691431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.691431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.691431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.691431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.691431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.692429 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.692429 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.692429 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.693435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.693435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.693435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.694432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.694432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.694432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.695431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.695431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.695431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.695431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.696431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.696431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.696431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.696431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.697432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.697432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.697432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.697432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.698431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.698431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.698431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.699431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.699431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.699431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.700431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.700431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.700431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.701431 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.702432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.703432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.703432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.703432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.703432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.704432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.704432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.704432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.704432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.705432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.705432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.705432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.705432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.705432 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.706433 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.706433 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.706433 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.706433 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.706433 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.707433 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.707433 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.707433 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.708434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.708434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.708434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.708434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.709434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.709434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.709434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.709434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.709434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.710434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.710434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.710434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.710434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.710434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.711434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.711434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.711434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.711434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.711434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.712434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.712434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.712434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.712434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.712434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.713434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.713434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.713434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.713434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.713434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.714434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.714434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.714434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.714434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.715434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.715434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.715434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.715434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.715434 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.716435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.716435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.716435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.716435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.716435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.717435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.717435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.717435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.717435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.717435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.718435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.718435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.718435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.718435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.718435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.719435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.719435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.719435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.719435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.719435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.720435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.720435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.720435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.720435 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.721436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.721436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.721436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.721436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.721436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.722436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.722436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.722436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.722436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.722436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.723436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.723436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.723436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.723436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.723436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.724437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.724437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.724437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.724437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.724437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.725436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.725436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.725436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.725436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.725436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.725436 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.726437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.726437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.726437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.726437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.726437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.727437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.727437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.727437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.727437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.727437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.728437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.728437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.728437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.728437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.728437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.728437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.729437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.729437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.729437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.729437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.729437 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.730438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.730438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.730438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.730438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.730438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.731438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.731438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.731438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.731438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.731438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.731438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.732438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.732438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.732438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.732438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.732438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.733438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.733438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.733438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.733438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_x" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 00:23:13.733438 2023] [php:warn] [pid 9844:tid 1772] [client ::1:3548] PHP Warning:  Undefined array key "user_target_coordinate_y" in C:\\xampp\\htdocs\\lib\\select_list.php on line 6
+[Sat Jun 10 01:50:26.021355 2023] [ssl:warn] [pid 25304:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 01:50:26.068366 2023] [core:warn] [pid 25304:tid 400] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Jun 10 01:50:26.071366 2023] [ssl:warn] [pid 25304:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 01:50:26.138381 2023] [mpm_winnt:notice] [pid 25304:tid 400] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Sat Jun 10 01:50:26.138381 2023] [mpm_winnt:notice] [pid 25304:tid 400] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Sat Jun 10 01:50:26.138381 2023] [core:notice] [pid 25304:tid 400] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Sat Jun 10 01:50:26.142383 2023] [mpm_winnt:notice] [pid 25304:tid 400] AH00418: Parent: Created child process 21732
+[Sat Jun 10 01:50:26.918557 2023] [ssl:warn] [pid 21732:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 01:50:26.959566 2023] [ssl:warn] [pid 21732:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 01:50:27.020580 2023] [mpm_winnt:notice] [pid 21732:tid 404] AH00354: Child: Starting 150 worker threads.
+[Sat Jun 10 01:59:21.826929 2023] [ssl:warn] [pid 9800:tid 412] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 01:59:21.868938 2023] [core:warn] [pid 9800:tid 412] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Jun 10 01:59:21.870939 2023] [ssl:warn] [pid 9800:tid 412] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 01:59:21.931953 2023] [mpm_winnt:notice] [pid 9800:tid 412] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Sat Jun 10 01:59:21.931953 2023] [mpm_winnt:notice] [pid 9800:tid 412] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Sat Jun 10 01:59:21.931953 2023] [core:notice] [pid 9800:tid 412] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Sat Jun 10 01:59:21.935953 2023] [mpm_winnt:notice] [pid 9800:tid 412] AH00418: Parent: Created child process 7240
+[Sat Jun 10 01:59:22.715131 2023] [ssl:warn] [pid 7240:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 01:59:22.757141 2023] [ssl:warn] [pid 7240:tid 404] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 01:59:22.818154 2023] [mpm_winnt:notice] [pid 7240:tid 404] AH00354: Child: Starting 150 worker threads.
+[Sat Jun 10 02:29:52.699104 2023] [ssl:warn] [pid 13804:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 02:29:52.742114 2023] [core:warn] [pid 13804:tid 400] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Jun 10 02:29:52.744114 2023] [ssl:warn] [pid 13804:tid 400] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 02:29:52.803128 2023] [mpm_winnt:notice] [pid 13804:tid 400] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Sat Jun 10 02:29:52.803128 2023] [mpm_winnt:notice] [pid 13804:tid 400] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Sat Jun 10 02:29:52.803128 2023] [core:notice] [pid 13804:tid 400] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Sat Jun 10 02:29:52.808129 2023] [mpm_winnt:notice] [pid 13804:tid 400] AH00418: Parent: Created child process 38904
+[Sat Jun 10 16:03:20.070761 2023] [ssl:warn] [pid 3260:tid 364] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 16:03:20.108090 2023] [core:warn] [pid 3260:tid 364] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Jun 10 16:03:20.111016 2023] [ssl:warn] [pid 3260:tid 364] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 16:03:20.152975 2023] [mpm_winnt:notice] [pid 3260:tid 364] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Sat Jun 10 16:03:20.153972 2023] [mpm_winnt:notice] [pid 3260:tid 364] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Sat Jun 10 16:03:20.153972 2023] [core:notice] [pid 3260:tid 364] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Sat Jun 10 16:03:20.162942 2023] [mpm_winnt:notice] [pid 3260:tid 364] AH00418: Parent: Created child process 4692
+[Sat Jun 10 16:03:20.485241 2023] [ssl:warn] [pid 4692:tid 188] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 16:03:20.518138 2023] [ssl:warn] [pid 4692:tid 188] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 16:03:20.552815 2023] [mpm_winnt:notice] [pid 4692:tid 188] AH00354: Child: Starting 150 worker threads.
+[Sat Jun 10 18:37:11.517867 2023] [ssl:warn] [pid 23544:tid 348] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 18:37:11.553746 2023] [core:warn] [pid 23544:tid 348] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Jun 10 18:37:11.555740 2023] [ssl:warn] [pid 23544:tid 348] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 18:37:11.594938 2023] [mpm_winnt:notice] [pid 23544:tid 348] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Sat Jun 10 18:37:11.594938 2023] [mpm_winnt:notice] [pid 23544:tid 348] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Sat Jun 10 18:37:11.594938 2023] [core:notice] [pid 23544:tid 348] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Sat Jun 10 18:37:11.599450 2023] [mpm_winnt:notice] [pid 23544:tid 348] AH00418: Parent: Created child process 3556
+[Sat Jun 10 18:37:11.921727 2023] [ssl:warn] [pid 3556:tid 352] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 18:37:11.957131 2023] [ssl:warn] [pid 3556:tid 352] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 18:37:11.992213 2023] [mpm_winnt:notice] [pid 3556:tid 352] AH00354: Child: Starting 150 worker threads.
+[Sat Jun 10 18:38:40.147560 2023] [mpm_winnt:crit] [pid 3556:tid 352] AH02538: Child: Parent process exited abruptly. Child process is ending
+[Sat Jun 10 23:20:15.211493 2023] [ssl:warn] [pid 5440:tid 368] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 23:20:15.250748 2023] [core:warn] [pid 5440:tid 368] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Jun 10 23:20:15.253054 2023] [ssl:warn] [pid 5440:tid 368] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 23:20:15.295766 2023] [mpm_winnt:notice] [pid 5440:tid 368] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Sat Jun 10 23:20:15.295766 2023] [mpm_winnt:notice] [pid 5440:tid 368] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Sat Jun 10 23:20:15.295766 2023] [core:notice] [pid 5440:tid 368] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Sat Jun 10 23:20:15.303279 2023] [mpm_winnt:notice] [pid 5440:tid 368] AH00418: Parent: Created child process 18284
+[Sat Jun 10 23:20:15.688809 2023] [ssl:warn] [pid 18284:tid 364] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 23:20:15.726806 2023] [ssl:warn] [pid 18284:tid 364] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Jun 10 23:20:15.766323 2023] [mpm_winnt:notice] [pid 18284:tid 364] AH00354: Child: Starting 150 worker threads.
+[Sun Jun 11 15:30:44.493406 2023] [ssl:warn] [pid 20376:tid 364] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jun 11 15:30:44.530443 2023] [core:warn] [pid 20376:tid 364] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Jun 11 15:30:44.532437 2023] [ssl:warn] [pid 20376:tid 364] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jun 11 15:30:44.756169 2023] [mpm_winnt:notice] [pid 20376:tid 364] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Sun Jun 11 15:30:44.756169 2023] [mpm_winnt:notice] [pid 20376:tid 364] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Sun Jun 11 15:30:44.756169 2023] [core:notice] [pid 20376:tid 364] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Sun Jun 11 15:30:44.764360 2023] [mpm_winnt:notice] [pid 20376:tid 364] AH00418: Parent: Created child process 26592
+[Sun Jun 11 15:30:45.071456 2023] [ssl:warn] [pid 26592:tid 348] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jun 11 15:30:45.105252 2023] [ssl:warn] [pid 26592:tid 348] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jun 11 15:30:45.144090 2023] [mpm_winnt:notice] [pid 26592:tid 348] AH00354: Child: Starting 150 worker threads.
+[Sun Jun 11 21:03:18.513166 2023] [ssl:warn] [pid 6024:tid 340] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jun 11 21:03:18.549527 2023] [core:warn] [pid 6024:tid 340] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Jun 11 21:03:18.550828 2023] [ssl:warn] [pid 6024:tid 340] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jun 11 21:03:18.790593 2023] [mpm_winnt:notice] [pid 6024:tid 340] AH00455: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4 configured -- resuming normal operations
+[Sun Jun 11 21:03:18.790593 2023] [mpm_winnt:notice] [pid 6024:tid 340] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
+[Sun Jun 11 21:03:18.790593 2023] [core:notice] [pid 6024:tid 340] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Sun Jun 11 21:03:18.798827 2023] [mpm_winnt:notice] [pid 6024:tid 340] AH00418: Parent: Created child process 5568
+[Sun Jun 11 21:03:19.139701 2023] [ssl:warn] [pid 5568:tid 336] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jun 11 21:03:19.177019 2023] [ssl:warn] [pid 5568:tid 336] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Jun 11 21:03:19.213745 2023] [mpm_winnt:notice] [pid 5568:tid 336] AH00354: Child: Starting 150 worker threads.
+[Sun Jun 11 21:10:40.036331 2023] [mpm_winnt:crit] [pid 5568:tid 336] AH02538: Child: Parent process exited abruptly. Child process is ending

@@ -38,18 +38,11 @@
             </div>
             <div class="bottom_input">
                 <div class="bottom_box">
-                    <ul>
-                        <li>
-                            <select name="start" id="start"> <!-- id 추가 -->
-                                <option value="">장소명</option>
-                                <?php include './lib/select_list.php'; ?>
-                            </select>
-                        </li>
-                    </ul>
+                    <p><input type="text" id="area" placeholder="장소명"><p>
                 </div>
             </div>
             <div class="bottom_btn">
-                <a>설정 후 맵 클릭</a>
+                <a href="javascript:void(0);" onclick="SetOnClick();">등록</a>
             </div>
         </div>
     </section>

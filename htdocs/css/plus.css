@@ -124,18 +124,13 @@ bottom_btn@font-face{
 	width: 100%;
 	height: 100%;
 }
-.bottom_box>ul{
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-.bottom_box>ul>li{
+.bottom_box>p{
 	position: relative;
 	width: 100%;
 	height: 50px;
 	margin-bottom: 20px;
 }
-.bottom_box>ul>li>select{
+.bottom_box>p>input{
 	position: relative;
 	width: 100%;
 	height: 100%;

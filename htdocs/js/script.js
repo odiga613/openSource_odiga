@@ -13,7 +13,7 @@ let iconObject2 = L.icon({
 
 $(document).ready(function (e) {
     let host;
-    let defaultKey = "18357858-b79d-4a43-a5e2-11d0f6b21734";
+    let defaultKey = "8140a0c6-0a3d-442f-aeee-71e6b3885338";
     let ghRouting = new GraphHopper.Routing({ key: defaultKey, host: host }, { elevation: false });
     let overwriteExistingKey = function () {
         let key = $("#custom_key_input").val();
