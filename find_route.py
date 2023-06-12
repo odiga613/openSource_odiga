@@ -133,5 +133,5 @@ except ValueError:
         print("현재 위치 근처입니다.")
 
 # 거리 출력
-len = nx.shortest_path_length(G, orig, dest, weight = 'length') / 1000
+len = nx.shortest_path_length(G, orig, dest, weight = "length") / 1000
 print(round(round(len, 3) + extra_lenth, 3), "km")
