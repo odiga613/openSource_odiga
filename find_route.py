@@ -11,14 +11,14 @@ end_P = (P[n][0], P[n][1])
 
 # 전체 지도
 location_point = (33.45503, 126.56120)
-G = ox.graph_from_point(location_point, dist = 1400, dist_type = 'bbox', network_type = "all")
+G = ox.graph_from_point(location_point, dist = 1400, dist_type = "bbox", network_type = "all")
 
 # 출발지, 도착지 설정
 orig = ox.nearest_nodes(G, now_P[1], now_P[0])
 dest = ox.nearest_nodes(G, end_P[1], end_P[0])
 
 # 최단거리 표시
-route = ox.shortest_path(G, orig, dest, weight = 'length')
+route = ox.shortest_path(G, orig, dest, weight = "length")
 
 # folium으로 html 파일 생성
 marker = (P[n][2], P[n][3])
@@ -102,7 +102,7 @@ try:
         folium.PolyLine(extra_location).add_to(route_graph_map)
         extra_lenth = 0.102
 
-    route_graph_map.save('routh_with_folium.html')
+    route_graph_map.save("routh_with_folium.html")
 except ValueError:
     route_graph_map = folium.Map((33.45503, 126.56120), zoom_start = 16)
     folium.Marker(now_P).add_to(route_graph_map)
@@ -112,23 +112,23 @@ except ValueError:
         extra_location=[[33.45474, 126.56428], [33.45471, 126.56320], [33.45487, 126.56315]]
         folium.PolyLine(extra_location).add_to(route_graph_map)
         extra_lenth = 0.118
-        route_graph_map.save('routh_with_folium.html')
+        route_graph_map.save("routh_with_folium.html")
     elif n == 10:
         extra_location=[[33.45497, 126.56512], [33.45530, 126.56512], [33.45533, 126.56597]]
         folium.PolyLine(extra_location).add_to(route_graph_map)
         extra_lenth = 0.134
-        route_graph_map.save('routh_with_folium.html')
+        route_graph_map.save("routh_with_folium.html")
     elif n == 38:
         extra_location=[[33.45453, 126.56523], [33.45439, 126.56524], [33.45440, 126.56648], 
                         [33.45465, 126.56691], [33.45416, 126.56718]]
         folium.PolyLine(extra_location).add_to(route_graph_map)
         extra_lenth = 0.245
-        route_graph_map.save('routh_with_folium.html')
+        route_graph_map.save("routh_with_folium.html")
     elif n == 65:
         extra_location=[[33.45474, 126.56428], [33.45472,126.56350]]
         folium.PolyLine(extra_location).add_to(route_graph_map)
         extra_lenth = 0.075
-        route_graph_map.save('routh_with_folium.html')
+        route_graph_map.save("routh_with_folium.html")
     else:
         print("현재 위치 근처입니다.")
 
