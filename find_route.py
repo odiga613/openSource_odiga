@@ -4,7 +4,7 @@ import folium
 from buildings import P
 
 # 위치 주소값
-n = int(input("0 ~ 67: "))
+n = int(input("0 ~ 96: "))
 
 now_P = [33.45474, 126.56428]
 end_P = (P[n][0], P[n][1])
